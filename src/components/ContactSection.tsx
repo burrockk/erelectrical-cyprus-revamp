@@ -1,10 +1,8 @@
 import { Phone, Mail, MapPin, Clock, Globe } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
 export const ContactSection = () => {
-  return (
-    <section className="py-20 bg-gradient-hero">
+  return <section className="py-20 bg-gradient-hero">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
@@ -100,22 +98,14 @@ export const ContactSection = () => {
             Projeleriniz için teklif almaya hazır mısınız?
           </h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg"
-              className="bg-gradient-accent hover:bg-accent-dark transition-smooth shadow-glow"
-            >
+            <Button size="lg" className="bg-gradient-accent hover:bg-accent-dark transition-smooth shadow-glow">
               Teklif Talep Et
             </Button>
-            <Button 
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-primary transition-smooth"
-            >
+            <Button variant="outline" size="lg" className="bg-gradient-accent hover:bg-accent-dark transition-smooth shadow-glow">
               Katalog İndir
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
