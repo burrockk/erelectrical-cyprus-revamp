@@ -101,7 +101,7 @@ export const ContactSection = () => {
             <Button size="lg" className="bg-gradient-accent hover:bg-accent-dark transition-smooth shadow-glow">
               Teklif Talep Et
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary transition-smooth">
+            <Button variant="outline" size="lg" className="border-white text-white hover:bg-orange hover:text-primary transition-smooth">
               Katalog İndir
             </Button>
           </div>
