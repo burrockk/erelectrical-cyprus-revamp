@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, X } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, X, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import cyprusMapSvg from "@/assets/cyprus-map.svg";
 
 const branches = [
   {
@@ -13,7 +14,8 @@ const branches = [
     email: "lefkosa@erelelectrical.com",
     hours: "Pazartesi - Cumartesi: 08:00 - 18:00",
     description: "Ana merkez şubemiz ve ana depo tesisimiz",
-    position: { x: 50, y: 45 }
+    position: { x: 570, y: 330 }, // Updated for real SVG coordinates
+    image: null // Will add branch images later
   },
   {
     id: "girne",
@@ -24,7 +26,8 @@ const branches = [
     email: "girne@erelelectrical.com",
     hours: "Pazartesi - Cumartesi: 08:30 - 17:30",
     description: "Kuzey Kıbrıs bölgesi hizmet merkezi",
-    position: { x: 45, y: 25 }
+    position: { x: 490, y: 220 }, // Updated for real SVG coordinates
+    image: null
   },
   {
     id: "magusa",
@@ -35,13 +38,13 @@ const branches = [
     email: "magusa@erelelectrical.com", 
     hours: "Pazartesi - Cumartesi: 08:00 - 18:00",
     description: "2026'da açılacak Kıbrıs'ın en büyük elektrik ve aydınlatma şubesi",
-    position: { x: 75, y: 55 }
+    position: { x: 850, y: 380 }, // Updated for real SVG coordinates
+    image: null
   }
 ];
 
 export const CyprusMap = () => {
   const [selectedBranch, setSelectedBranch] = useState<string | null>(null);
-  const [hoveredBranch, setHoveredBranch] = useState<string | null>(null);
 
   const selectedBranchData = branches.find(b => b.id === selectedBranch);
 
@@ -64,47 +67,38 @@ export const CyprusMap = () => {
               Kıbrıs Haritası
             </h3>
             
-            {/* SVG Map of Cyprus */}
-            <div className="relative mx-auto" style={{ maxWidth: "500px", height: "300px" }}>
-              <svg 
-                viewBox="0 0 100 60" 
-                className="w-full h-full border-2 border-primary/20 rounded-lg bg-gradient-to-br from-blue-50 to-blue-100"
-              >
-                {/* Cyprus outline (simplified) */}
-                <path
-                  d="M10,35 Q15,20 25,25 Q35,15 50,20 Q65,10 80,20 Q90,25 85,40 Q80,50 70,45 Q60,55 45,50 Q30,55 20,45 Q10,40 10,35 Z"
-                  fill="hsl(var(--primary))"
-                  fillOpacity="0.1"
-                  stroke="hsl(var(--primary))"
-                  strokeWidth="0.5"
+            {/* Real Cyprus SVG Map */}
+            <div className="relative mx-auto" style={{ maxWidth: "600px", height: "400px" }}>
+              <div className="relative w-full h-full">
+                <img 
+                  src={cyprusMapSvg} 
+                  alt="Kıbrıs Haritası"
+                  className="w-full h-full object-contain"
                 />
                 
-                {/* Branch markers */}
+                {/* Branch markers positioned over the SVG */}
                 {branches.map((branch) => (
-                  <g key={branch.id}>
-                    <circle
-                      cx={branch.position.x}
-                      cy={branch.position.y}
-                      r={hoveredBranch === branch.id ? "3" : "2.5"}
-                      fill="hsl(var(--accent))"
-                      stroke="white"
-                      strokeWidth="1"
-                      className="cursor-pointer transition-all duration-200 hover:scale-125"
-                      onMouseEnter={() => setHoveredBranch(branch.id)}
-                      onMouseLeave={() => setHoveredBranch(null)}
-                      onClick={() => setSelectedBranch(branch.id)}
-                    />
-                    <text
-                      x={branch.position.x}
-                      y={branch.position.y - 5}
-                      textAnchor="middle"
-                      className="text-xs fill-primary font-semibold pointer-events-none"
-                    >
-                      {branch.city}
-                    </text>
-                  </g>
+                  <div
+                    key={branch.id}
+                    className="absolute cursor-pointer transform -translate-x-1/2 -translate-y-1/2"
+                    style={{
+                      left: `${(branch.position.x / 1140) * 100}%`,
+                      top: `${(branch.position.y / 740) * 100}%`
+                    }}
+                    onClick={() => setSelectedBranch(branch.id)}
+                  >
+                    <div className="relative">
+                      <div className="w-6 h-6 bg-accent rounded-full border-2 border-white shadow-lg hover:scale-110 transition-transform cursor-pointer">
+                      </div>
+                      <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                        <span className="text-xs font-semibold text-primary bg-white px-2 py-1 rounded shadow">
+                          {branch.city}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 ))}
-              </svg>
+              </div>
             </div>
 
             <div className="mt-6 text-center">
@@ -131,6 +125,17 @@ export const CyprusMap = () => {
                   </Button>
                 </CardHeader>
                 <CardContent className="space-y-4">
+                  {/* Branch Image Area */}
+                  <div className="mb-6">
+                    <div className="w-full h-32 bg-muted rounded-lg flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
+                      <div className="text-center text-muted-foreground">
+                        <Building className="h-8 w-8 mx-auto mb-2" />
+                        <p className="text-sm">Şube Görseli</p>
+                        <p className="text-xs">(Yakında eklenecek)</p>
+                      </div>
+                    </div>
+                  </div>
+
                   <p className="text-muted-foreground">
                     {selectedBranchData.description}
                   </p>
