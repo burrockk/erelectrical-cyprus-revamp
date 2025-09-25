@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import fumagalliLogo from "@/assets/fumagalli-logo.webp";
 
 // Simulated brand logos - in real implementation, these would be actual brand images
 const brands = [
@@ -44,8 +45,16 @@ export const BrandsSlider = () => {
                       key={index}
                       className="flex items-center justify-center h-24 bg-muted rounded-lg hover:bg-primary hover:text-white transition-all duration-300 group cursor-pointer p-4"
                     >
-                      <div className="flex items-center gap-3 group-hover:scale-105 transition-transform">
-                        <div className="w-8 h-8 bg-muted-foreground/20 rounded-md flex-shrink-0 group-hover:bg-white/20 transition-colors"></div>
+                      <div className="flex items-center gap-4 group-hover:scale-105 transition-transform">
+                        <div className="w-12 h-12 bg-muted-foreground/20 rounded-md flex-shrink-0 group-hover:bg-white/20 transition-colors flex items-center justify-center overflow-hidden">
+                          {brand === "Legrand" ? (
+                            <img 
+                              src={fumagalliLogo} 
+                              alt="Fumagalli Logo" 
+                              className="w-full h-full object-contain"
+                            />
+                          ) : null}
+                        </div>
                         <span className="text-lg font-semibold text-center">
                           {brand}
                         </span>
