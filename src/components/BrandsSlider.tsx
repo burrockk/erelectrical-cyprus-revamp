@@ -46,7 +46,7 @@ export const BrandsSlider = () => {
                       className="flex items-center justify-center h-24 bg-muted rounded-lg hover:bg-primary hover:text-white transition-all duration-300 group cursor-pointer p-4"
                     >
                       <div className="flex items-center gap-4 group-hover:scale-105 transition-transform">
-                        <div className="w-12 h-12 bg-muted-foreground/20 rounded-md flex-shrink-0 group-hover:bg-white/20 transition-colors flex items-center justify-center overflow-hidden">
+                        <div className="w-15 h-15 bg-muted-foreground/20 rounded-md flex-shrink-0 group-hover:bg-white/20 transition-colors flex items-center justify-center overflow-hidden">
                           {brand === "Legrand" ? (
                             <img 
                               src={fumagalliLogo} 
