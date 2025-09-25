@@ -42,11 +42,14 @@ export const BrandsSlider = () => {
                   {brands.slice(slideIndex * 4, (slideIndex + 1) * 4).map((brand, index) => (
                     <div 
                       key={index}
-                      className="flex items-center justify-center h-24 bg-muted rounded-lg hover:bg-primary hover:text-white transition-all duration-300 group cursor-pointer"
+                      className="flex items-center justify-center h-24 bg-muted rounded-lg hover:bg-primary hover:text-white transition-all duration-300 group cursor-pointer p-4"
                     >
-                      <span className="text-lg font-semibold text-center px-4 group-hover:scale-105 transition-transform">
-                        {brand}
-                      </span>
+                      <div className="flex items-center gap-3 group-hover:scale-105 transition-transform">
+                        <div className="w-8 h-8 bg-muted-foreground/20 rounded-md flex-shrink-0 group-hover:bg-white/20 transition-colors"></div>
+                        <span className="text-lg font-semibold text-center">
+                          {brand}
+                        </span>
+                      </div>
                     </div>
                   ))}
                 </div>
