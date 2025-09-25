@@ -37,33 +37,46 @@ export const BrandsSlider = () => {
               transform: `translateX(-${currentIndex * 100}%)`
             }}
           >
-            {Array.from({ length: Math.ceil(brands.length / 4) }).map((_, slideIndex) => (
-              <div key={slideIndex} className="w-full flex-shrink-0">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                  {brands.slice(slideIndex * 4, (slideIndex + 1) * 4).map((brand, index) => (
-                    <div 
-                      key={index}
-                      className="flex items-center justify-center h-24 bg-muted rounded-lg hover:bg-primary hover:text-white transition-all duration-300 group cursor-pointer p-4"
-                    >
-                       <div className="flex items-center gap-6 group-hover:scale-105 transition-transform">
-                         <div className="w-36 h-20 bg-muted-foreground/20 rounded-md flex-shrink-0 group-hover:bg-white/20 transition-colors flex items-center justify-center overflow-hidden">
-                          {brand === "Legrand" ? (
-                            <img 
-                              src={fumagalliLogo} 
-                              alt="Fumagalli Logo" 
-                              className="w-full h-full object-contain"
-                            />
-                          ) : null}
-                        </div>
-                        <span className="text-lg font-semibold text-center">
-                          {brand}
-                        </span>
+            {Array.from({ length: Math.ceil(brands.length / 4) }).map((_, slideIndex) => {
+              const slideBrands = brands.slice(slideIndex * 4, (slideIndex + 1) * 4);
+              // Pad with empty slots to ensure consistent grid
+              const paddedBrands = [...slideBrands];
+              while (paddedBrands.length < 4) {
+                paddedBrands.push(null);
+              }
+              
+              return (
+                <div key={slideIndex} className="w-full flex-shrink-0">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    {paddedBrands.map((brand, index) => (
+                      <div 
+                        key={index}
+                        className={`flex items-center justify-center h-24 rounded-lg transition-all duration-300 group cursor-pointer p-4 ${
+                          brand ? "bg-muted hover:bg-primary hover:text-white" : "opacity-0 pointer-events-none"
+                        }`}
+                      >
+                        {brand && (
+                          <div className="flex items-center gap-6 group-hover:scale-105 transition-transform">
+                            <div className="w-36 h-20 bg-muted-foreground/20 rounded-md flex-shrink-0 group-hover:bg-white/20 transition-colors flex items-center justify-center overflow-hidden">
+                              {brand === "Legrand" ? (
+                                <img 
+                                  src={fumagalliLogo} 
+                                  alt="Fumagalli Logo" 
+                                  className="w-full h-full object-contain"
+                                />
+                              ) : null}
+                            </div>
+                            <span className="text-lg font-semibold text-center">
+                              {brand}
+                            </span>
+                          </div>
+                        )}
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
