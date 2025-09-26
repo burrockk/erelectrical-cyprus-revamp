@@ -45,7 +45,7 @@ const sectors = [
 
 export const SectorsSection = () => {
   return (
-    <section className="py-20 bg-muted">
+    <section id="sectors" className="py-20 bg-muted">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">

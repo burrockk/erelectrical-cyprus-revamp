@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin, Clock, Globe } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 export const ContactSection = () => {
-  return <section className="py-20 bg-gradient-hero">
+  return <section id="contact" className="py-20 bg-gradient-hero">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">

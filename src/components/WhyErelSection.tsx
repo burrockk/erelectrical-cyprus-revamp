@@ -25,7 +25,7 @@ const advantages = [
 
 export const WhyErelSection = () => {
   return (
-    <section className="py-20 bg-gradient-hero relative overflow-hidden">
+    <section id="about" className="py-20 bg-gradient-hero relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 border-2 border-white rounded-full"></div>

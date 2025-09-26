@@ -2,12 +2,24 @@ import { Link } from "react-router-dom";
 import { Zap } from "lucide-react";
 
 const Header = () => {
+  const scrollToSection = (sectionId: string) => {
+    if (sectionId === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const navigationItems = [
-    { name: "Ana Sayfa", href: "/" },
-    { name: "Sektörler", href: "#sectors" },
-    { name: "Hakkımızda", href: "#about" },
-    { name: "Şubelerimiz", href: "#branches" },
-    { name: "İletişim", href: "#contact" },
+    { name: "Ana Sayfa", sectionId: "top" },
+    { name: "Sektörler", sectionId: "sectors" },
+    { name: "Hakkımızda", sectionId: "about" },
+    { name: "Şubelerimiz", sectionId: "branches" },
+    { name: "İletişim", sectionId: "contact" },
   ];
 
   return (
@@ -28,13 +40,13 @@ const Header = () => {
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                onClick={() => scrollToSection(item.sectionId)}
+                className="text-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
           </nav>
 
