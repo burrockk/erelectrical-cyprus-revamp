@@ -1,11 +1,33 @@
 import { useEffect, useState } from "react";
 import fumagalliLogo from "@/assets/fumagalli-logo.webp";
+import osdaLogo from "@/assets/osda-logo.webp";
+import pamukLogo from "@/assets/pamuk-logo.webp";
+import renesolaLogo from "@/assets/renesola-logo.webp";
+import ritarLogo from "@/assets/ritar-logo.webp";
+import schneiderLogo from "@/assets/schneider-logo.webp";
+import smartHeaterLogo from "@/assets/smart-heater-logo.webp";
+import smartLightingLogo from "@/assets/smart-lighting-logo.webp";
+import solplanetLogo from "@/assets/solplanet-logo.webp";
+import unalLogo from "@/assets/unal-logo.webp";
+import voltronicLogo from "@/assets/voltronic-logo.webp";
 
-// Simulated brand logos - in real implementation, these would be actual brand images
-const brands = [
-  "Schneider Electric", "ABB", "Siemens", "Legrand", "Phoenix Contact",
-  "Weidmuller", "Rittal", "Moeller", "KLEMSAN", "Nexans", "Prysmian",
-  "General Electric", "Osram", "Philips", "Toshiba", "Panasonic"
+interface Brand {
+  name: string;
+  logo: string;
+}
+
+const brands: Brand[] = [
+  { name: "Schneider Electric", logo: schneiderLogo },
+  { name: "Fumagalli", logo: fumagalliLogo },
+  { name: "OSDA", logo: osdaLogo },
+  { name: "Pamukkale Kablo", logo: pamukLogo },
+  { name: "ReneSola", logo: renesolaLogo },
+  { name: "Ritar", logo: ritarLogo },
+  { name: "Smart Heater", logo: smartHeaterLogo },
+  { name: "Smart Lighting", logo: smartLightingLogo },
+  { name: "Solplanet", logo: solplanetLogo },
+  { name: "Ünal Kablo", logo: unalLogo },
+  { name: "Voltronic Power", logo: voltronicLogo }
 ];
 
 export const BrandsSlider = () => {
@@ -51,23 +73,21 @@ export const BrandsSlider = () => {
                     {paddedBrands.map((brand, index) => (
                       <div 
                         key={index}
-                        className={`flex items-center justify-center h-24 rounded-lg transition-all duration-300 group cursor-pointer p-4 ${
+                        className={`flex items-center justify-center h-32 rounded-lg transition-all duration-300 group cursor-pointer p-4 ${
                           brand ? "bg-muted hover:bg-primary hover:text-white" : "opacity-0 pointer-events-none"
                         }`}
                       >
                         {brand && (
-                          <div className="flex items-center gap-6 group-hover:scale-105 transition-transform">
-                            <div className="w-36 h-20 bg-muted-foreground/20 rounded-md flex-shrink-0 group-hover:bg-white/20 transition-colors flex items-center justify-center overflow-hidden">
-                              {brand === "Legrand" ? (
-                                <img 
-                                  src={fumagalliLogo} 
-                                  alt="Fumagalli Logo" 
-                                  className="w-full h-full object-contain"
-                                />
-                              ) : null}
+                          <div className="flex flex-col items-center gap-3 group-hover:scale-105 transition-transform">
+                            <div className="w-full h-20 bg-white rounded-md flex-shrink-0 transition-colors flex items-center justify-center overflow-hidden p-2">
+                              <img 
+                                src={brand.logo} 
+                                alt={`${brand.name} Logo`} 
+                                className="w-full h-full object-contain"
+                              />
                             </div>
-                            <span className="text-lg font-semibold text-center">
-                              {brand}
+                            <span className="text-sm font-semibold text-center">
+                              {brand.name}
                             </span>
                           </div>
                         )}
