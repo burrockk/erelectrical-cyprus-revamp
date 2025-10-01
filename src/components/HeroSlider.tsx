@@ -56,48 +56,54 @@ export const HeroSlider = () => {
 
   return (
     <div className="relative h-screen overflow-hidden">
-      {slides.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`absolute inset-0 transition-transform duration-1000 ease-in-out ${
-            index === currentSlide ? "translate-x-0" : "translate-x-full"
-          }`}
-          style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${slide.image})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="container mx-auto px-6 h-full flex items-center">
-            <div className="max-w-3xl text-white animate-fade-in">
-              <h1 className="text-6xl font-bold mb-6 leading-tight">
-                {slide.title}
-              </h1>
-              <h2 className="text-2xl mb-4 text-accent">
-                {slide.subtitle}
-              </h2>
-              <p className="text-xl mb-8 text-gray-200">
-                {slide.description}
-              </p>
-              <div className="flex gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-primary hover:bg-primary-dark transition-smooth shadow-glow"
-                >
-                  Ürünlerimizi Keşfedin
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-white text-white hover:bg-white hover:text-primary transition-smooth"
-                >
-                  İletişime Geçin
-                </Button>
+      {slides.map((slide, index) => {
+        const position = index === currentSlide 
+          ? "translate-x-0" 
+          : index === (currentSlide - 1 + slides.length) % slides.length
+          ? "-translate-x-full"
+          : "translate-x-full";
+        
+        return (
+          <div
+            key={slide.id}
+            className={`absolute inset-0 transition-transform duration-700 ease-in-out ${position}`}
+            style={{
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${slide.image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="container mx-auto px-6 h-full flex items-center">
+              <div className="max-w-3xl text-white animate-fade-in">
+                <h1 className="text-6xl font-bold mb-6 leading-tight">
+                  {slide.title}
+                </h1>
+                <h2 className="text-2xl mb-4 text-accent">
+                  {slide.subtitle}
+                </h2>
+                <p className="text-xl mb-8 text-gray-200">
+                  {slide.description}
+                </p>
+                <div className="flex gap-4">
+                  <Button 
+                    size="lg" 
+                    className="bg-gradient-primary hover:bg-primary-dark transition-smooth shadow-glow"
+                  >
+                    Ürünlerimizi Keşfedin
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    className="border-white text-white hover:bg-white hover:text-primary transition-smooth"
+                  >
+                    İletişime Geçin
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
 
       {/* Navigation Arrows */}
       <Button
