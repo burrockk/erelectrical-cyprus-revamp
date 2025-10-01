@@ -70,7 +70,7 @@ export const Timeline = () => {
                   onMouseEnter={() => setActiveEvent(index)}
                 >
                   {/* Content */}
-                  <div className={`w-5/12 ${index % 2 === 0 ? "text-right pr-8" : "text-left pl-8"}`}>
+                  <div className={`w-5/12 ${index % 2 === 0 ? "text-left pl-8" : "text-left pr-8"}`}>
                     <div className={`p-6 rounded-2xl shadow-card bg-white border-l-4 border-primary hover:shadow-elegant transition-all duration-300 cursor-pointer ${
                       activeEvent === index ? "scale-105" : ""
                     }`}>
