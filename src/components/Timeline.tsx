@@ -3,37 +3,58 @@ import { Building, Factory, Zap, MapPin } from "lucide-react";
 
 const timelineEvents = [
   {
-    year: "1954",
+    year: "1942",
     title: "Kuruluş",
     description: "Foundations of our family-owned business were first laid in 1942 by Dervis Erel in Nicosia. Production and distribution of general construction materials have been our main dealings for many years.",
     icon: Building,
     color: "from-primary to-primary-light"
   },
   {
-    year: "2008", 
-    title: "Sektör Değişikliği",
-    description: "Elektrik malzemeleri distribütörlüğüne odaklanıldı",
+    year: "2010", 
+    title: "New Milestone",
+    description: "We started importing electrical and lighting products from the biggest companies all over the world. This was a major milestone for our company and the first step we took becoming a leading company in the local market.",
     icon: Zap,
     color: "from-accent to-accent-light"
   },
   {
     year: "2011",
-    title: "Kablo Üretimi",
-    description: "Kablo üretim fabrikamızın açılışı gerçekleştirildi",
+    title: "Manufacturing",
+    description: "Our first production line for energy cables was constructed. Our cable insulations are above standards. We keep the cable resistance low and flexibility high.",
     icon: Factory,
     color: "from-solar to-accent"
   },
   {
-    year: "2022",
-    title: "PVC Boru Üretimi",
-    description: "PVC elektrik borusu üretim hattımız devreye alındı",
-    icon: Factory,
+    year: "2016",
+    title: "Growing",
+    description: "Our second sales office in Kyrenia was opened. We expanded our distribution network. We sustain our highest level of service and quality in all our branches.",
+    icon: MapPin,
     color: "from-primary-light to-accent"
   },
   {
+    year: "2019",
+    title: "Innovating",
+    description: "We set up an electrical pipes manufacturing facility with cutting-edge technology machinery.",
+    icon: Factory,
+    color: "from-accent to-primary"
+  },
+  {
+    year: "2020",
+    title: "Expanding",
+    description: "We started importing and distributing solar energy products. Partnered with TIER 1 solar energy brands. We have become a major player in the renewable energy sector.",
+    icon: Zap,
+    color: "from-solar to-accent-light"
+  },
+  {
+    year: "2024",
+    title: "Medium Voltage",
+    description: "We started importing and distributing medium voltage cables, transformers and components.",
+    icon: Zap,
+    color: "from-primary to-accent"
+  },
+  {
     year: "2026",
-    title: "Mağusa Şubesi",
-    description: "Kıbrıs'ın en büyük elektrik ve aydınlatma şubesinin açılışı",
+    title: "Always Bigger",
+    description: "We proudly opened our Mağusa branch — the largest store of its kind in Cyprus, offering the widest selection of products in the industry and redefining the shopping experience.",
     icon: MapPin,
     color: "from-accent to-solar"
   }
