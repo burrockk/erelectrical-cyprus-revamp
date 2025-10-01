@@ -80,13 +80,13 @@ export const HeroSlider = () => {
             <div className="container mx-auto px-6 h-full flex items-center">
               <div className={`max-w-3xl text-white transition-opacity duration-500 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}>
                 <h1 className="text-6xl font-bold mb-6 leading-tight">
-                  {slide.title}
+                  {/*slide.title*/}
                 </h1>
                 <h2 className="text-2xl mb-4 text-accent">
-                  {slide.subtitle}
+                  {/*slide.subtitle*/}
                 </h2>
                 <p className="text-xl mb-8 text-gray-200">
-                  {slide.description}
+                  {/*slide.description*/}
                 </p>
                 <div className="flex gap-4">
                {/*<Button 
