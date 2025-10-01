@@ -4,40 +4,37 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 const sectors = [
   {
     icon: Zap,
-    title: "Elektrik Malzemeleri",
-    description: "A'dan Z'ye tüm düşük voltaj elektrik malzemeleri ve orta gerilim elektrik malzemeleri",
+    title: "Electrical Products",
+    description: "A complete range of low and medium voltage electrical materials and accessories",
     features: [
-      "Düşük voltaj sistemleri",
-      "Orta gerilim ekipmanları", 
-      "Endüstriyel çözümler",
-      "Kontrol ve kumanda sistemleri",
-      "Kablo ve bağlantı elemanları"
+      "Low and medium voltage energy cables and accessories",
+      "Power transformers", 
+      "Industrial solutions",
+      "Decorative electrical products"
     ],
     gradient: "from-primary to-primary-light"
   },
   {
     icon: Sun,
-    title: "Solar Sistem Bileşenleri",
-    description: "Güneş enerjisi sistemleri için kaliteli ve verimli bileşenler",
+    title: "Solar Energy Products",
+    description: "Only high quality and TIER 1 brands for all kind of solar energy components",
     features: [
-      "Solar paneller",
-      "İnverterler ve dönüştürücüler",
-      "Aküler ve enerji depolama",
-      "Montaj sistemleri",
-      "İzleme ve kontrol sistemleri"
+      "Solar panels",
+      "Gel and lithium energy storage",
+      "ON-OFF grid and hybrid inverters",
+      "Protection, control and cable solutions",
     ],
     gradient: "from-solar to-accent"
   },
   {
     icon: Lightbulb,
-    title: "Aydınlatma Çözümleri",
-    description: "Modern ve enerji verimli aydınlatma sistemleri",
+    title: "Lighting",
+    description: "Modern and Industrial lighting solutions",
     features: [
-      "LED aydınlatma teknolojileri",
-      "Endüstriyel aydınlatma",
-      "Mimari aydınlatma çözümleri",
-      "Akıllı aydınlatma sistemleri",
-      "Dış mekan aydınlatması"
+      "Decorative lighting",
+      "Industrial lighting",
+      "Outdoor lighting",
+      "Solar lighting",
     ],
     gradient: "from-accent to-accent-light"
   }
@@ -49,11 +46,11 @@ export const SectorsSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Faaliyet Alanlarımız
+            Our Business Areas
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Üç ana sektörde uzmanlaşmış ekibimizle, elektrik ve enerji ihtiyaçlarınıza 
-            kapsamlı çözümler sunuyoruz.
+            As a leading company in three key sectors, we provide comprehensive
+                        solutions for all your electrical needs.
           </p>
         </div>
 

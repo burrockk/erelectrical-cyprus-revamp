@@ -4,35 +4,37 @@ import { Button } from "@/components/ui/button";
 import heroWarehouse from "@/assets/hero-electrical-warehouse.jpg";
 import heroSolar from "@/assets/hero-solar-installation.jpg";
 import heroLighting from "@/assets/hero-lighting-showroom.jpg";
+import { styleText } from "util";
 
 const slides = [
   {
     id: 1,
     image: heroWarehouse,
-    title: "Kıbrıs'ın En Büyük Elektrik Distribütörü",
-    subtitle: "A'dan Z'ye tüm elektrik malzemeleriniz tek çatı altında",
+    /* title: "4 Different Unique Models",
+    subtitle: "Available in 3 Elegant Colors",
     description: "70 yıllık deneyimimizle profesyonel çözümler sunuyoruz"
+    */
   },
   {
     id: 2,
     image: heroSolar,
-    title: "Solar Enerji Çözümleri",
+   /* title: "Solar Enerji Çözümleri",
     subtitle: "Gelecek nesillere temiz enerji bırakın",
-    description: "Premium solar panel ve sistem bileşenleri"
+    description: "Premium solar panel ve sistem bileşenleri" */
   },
   {
     id: 3,
     image: heroLighting,
-    title: "Aydınlatma Çözümleri",
-    subtitle: "Modern ve enerji verimli aydınlatma sistemleri",
-    description: "LED teknolojisi ile tasarruf edin"
+   /*  title: "Full Range of Low Voltage Solutions",
+    subtitle: "Full range of low voltage solutions",
+    description: "LED teknolojisi ile tasarruf edin" */
   },
   {
     id: 4,
     image: heroWarehouse,
-    title: "Endüstriyel Çözümler",
+  /*  title: "Endüstriyel Çözümler",
     subtitle: "Orta gerilim ve endüstriyel elektrik malzemeleri",
-    description: "Büyük projelerde güvenilir partneriniz"
+    description: "Büyük projelerde güvenilir partneriniz" */
   }
 ];
 
@@ -42,7 +44,7 @@ export const HeroSlider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 8000);
     return () => clearInterval(timer);
   }, []);
 
@@ -70,7 +72,7 @@ export const HeroSlider = () => {
             key={slide.id}
             className={`absolute inset-0 transition-all duration-700 ease-in-out ${position}`}
             style={{
-              backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${slide.image})`,
+              backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(${slide.image})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -87,19 +89,24 @@ export const HeroSlider = () => {
                   {slide.description}
                 </p>
                 <div className="flex gap-4">
-                  <Button 
+               {/*<Button 
                     size="lg" 
                     className="bg-gradient-primary hover:bg-primary-dark transition-smooth shadow-glow"
                   >
                     Ürünlerimizi Keşfedin
                   </Button>
-                  <Button 
+                */}
+               
+              {/*    <Button 
                     variant="outline" 
                     size="lg"
                     className="border-white text-white hover:bg-white hover:text-primary transition-smooth"
                   >
                     İletişime Geçin
                   </Button>
+
+                */}
+
                 </div>
               </div>
             </div>

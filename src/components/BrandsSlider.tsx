@@ -10,6 +10,14 @@ import smartLightingLogo from "@/assets/smart-lighting-logo.webp";
 import solplanetLogo from "@/assets/solplanet-logo.webp";
 import unalLogo from "@/assets/unal-logo.webp";
 import voltronicLogo from "@/assets/voltronic-logo.webp";
+import audioLogo from "@/assets/audio-logo.webp";
+import backerLogo from "@/assets/backer-logo.webp";
+import deyeLogo from "@/assets/deye-logo.webp";
+import ecLogo from "@/assets/ec-logo.webp";
+import eplLogo from "@/assets/epl-logo.webp";
+import huaweiLogo from "@/assets/huawei-logo.webp";
+import maxgeLogo from "@/assets/maxge-logo.webp";
+import ntLogo from "@/assets/nt-logo.webp";
 
 interface Brand {
   name: string;
@@ -27,7 +35,16 @@ const brands: Brand[] = [
   { name: "Smart Lighting", logo: smartLightingLogo },
   { name: "Solplanet", logo: solplanetLogo },
   { name: "Ünal Kablo", logo: unalLogo },
-  { name: "Voltronic Power", logo: voltronicLogo }
+  { name: "Voltronic Power", logo: voltronicLogo },
+  { name: "Audio", logo: audioLogo },
+  { name: "Backer", logo: backerLogo },
+  { name: "Deye", logo: deyeLogo },
+  { name: "Elettrocanali", logo: ecLogo },
+  { name: "Erel Cable", logo: eplLogo },
+  { name: "Huawei", logo: huaweiLogo },
+  { name: "Maxge", logo: maxgeLogo }, 
+  { name: "Nt", logo: ntLogo }, 
+
 ];
 
 export const BrandsSlider = () => {

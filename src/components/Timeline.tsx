@@ -53,7 +53,7 @@ const timelineEvents = [
   },
   {
     year: "2026",
-    title: "Always Bigger",
+    title: "The Biggest",
     description: "We proudly opened our Mağusa branch — the largest store of its kind in Cyprus, offering the widest selection of products in the industry and redefining the shopping experience.",
     icon: MapPin,
     color: "from-accent to-solar"
@@ -68,10 +68,10 @@ export const Timeline = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Tarihçemiz
+            Our History
           </h2>
           <p className="text-xl text-muted-foreground">
-            70 yıllık yolculuğumuzda attığımız önemli adımlar
+            Significant steps we've taken throughout our 84-year legacy
           </p>
         </div>
 
