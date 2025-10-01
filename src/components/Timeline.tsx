@@ -5,7 +5,7 @@ const timelineEvents = [
   {
     year: "1954",
     title: "Kuruluş",
-    description: "Erel Production Ltd. kuruldu ve Kıbrıs'ta faaliyetlerine başladı",
+    description: "Foundations of our family-owned business were first laid in 1942 by Dervis Erel in Nicosia. Production and distribution of general construction materials have been our main dealings for many years.",
     icon: Building,
     color: "from-primary to-primary-light"
   },
