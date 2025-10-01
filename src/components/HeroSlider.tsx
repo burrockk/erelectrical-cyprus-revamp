@@ -57,16 +57,18 @@ export const HeroSlider = () => {
   return (
     <div className="relative h-screen overflow-hidden">
       {slides.map((slide, index) => {
-        const position = index === currentSlide 
-          ? "translate-x-0" 
-          : index === (currentSlide - 1 + slides.length) % slides.length
-          ? "-translate-x-full"
-          : "translate-x-full";
+        let position = "translate-x-full opacity-0";
+        
+        if (index === currentSlide) {
+          position = "translate-x-0 opacity-100";
+        } else if (index === (currentSlide - 1 + slides.length) % slides.length) {
+          position = "-translate-x-full opacity-0";
+        }
         
         return (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-transform duration-700 ease-in-out ${position}`}
+            className={`absolute inset-0 transition-all duration-700 ease-in-out ${position}`}
             style={{
               backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${slide.image})`,
               backgroundSize: "cover",
@@ -74,7 +76,7 @@ export const HeroSlider = () => {
             }}
           >
             <div className="container mx-auto px-6 h-full flex items-center">
-              <div className="max-w-3xl text-white animate-fade-in">
+              <div className={`max-w-3xl text-white transition-opacity duration-500 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}>
                 <h1 className="text-6xl font-bold mb-6 leading-tight">
                   {slide.title}
                 </h1>
