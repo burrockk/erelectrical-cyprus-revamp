@@ -15,11 +15,11 @@ const Header = () => {
   };
 
   const navigationItems = [
-    { name: "Ana Sayfa", sectionId: "top" },
-    { name: "Sektörler", sectionId: "sectors" },
-    { name: "Hakkımızda", sectionId: "about" },
-    { name: "Şubelerimiz", sectionId: "branches" },
-    { name: "İletişim", sectionId: "contact" },
+    { name: "Hompage", sectionId: "top" },
+    { name: "Sectors", sectionId: "sectors" },
+    { name: "About Us", sectionId: "about" },
+    { name: "Locations", sectionId: "branches" },
+    { name: "Contact", sectionId: "contact" },
   ];
 
   return (
@@ -32,8 +32,8 @@ const Header = () => {
               <Zap className="w-6 h-6 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">Erel Production</h1>
-              <p className="text-sm text-muted-foreground">Electrical Solutions</p>
+              <h1 className="text-xl font-bold text-foreground">Erel Electrical</h1>
+              <p className="text-sm text-muted-foreground">Electrical • Lighting • Solar</p>
             </div>
           </Link>
 

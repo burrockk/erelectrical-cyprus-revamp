@@ -6,7 +6,7 @@ export const ContactSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            İletişim Bilgileri
+            Contact Us
           </h2>
           <p className="text-xl text-white/90">
             Bizimle iletişime geçin, profesyonel ekibimiz size yardımcı olmaktan mutluluk duyacaktır
@@ -20,11 +20,11 @@ export const ContactSection = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-accent flex items-center justify-center">
                 <Phone className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Telefon</h3>
-              <p className="text-white/80 mb-2">Merkez Ofis</p>
-              <p className="text-lg">+90 392 227 55 00</p>
+              <h3 className="text-xl font-bold mb-2">Phone</h3>
+              <p className="text-white/80 mb-2">Main Office</p>
+              <p className="text-lg">+90 392 223 87 21 / 22</p>
               <p className="text-white/80 text-sm mt-2">
-                Pazartesi - Cumartesi: 08:00 - 18:00
+                Monday - Saturday: 08:00 - 17:00
               </p>
             </CardContent>
           </Card>
@@ -35,11 +35,11 @@ export const ContactSection = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-solar flex items-center justify-center">
                 <Mail className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">E-posta</h3>
-              <p className="text-white/80 mb-2">Genel Bilgi</p>
+              <h3 className="text-xl font-bold mb-2">E-mail</h3>
+              <p className="text-white/80 mb-2">General</p>
               <p className="text-lg">info@erelelectrical.com</p>
-              <p className="text-white/80 mb-2 mt-4">Satış</p>
-              <p className="text-lg">sales@erelelectrical.com</p>
+              <p className="text-white/80 mb-2 mt-4">Sales</p>
+              <p className="text-lg">info@erelelectrical.com</p>
             </CardContent>
           </Card>
 
@@ -49,11 +49,11 @@ export const ContactSection = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary-light flex items-center justify-center">
                 <MapPin className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Adres</h3>
-              <p className="text-white/80 mb-2">Merkez Ofis & Depo</p>
+              <h3 className="text-xl font-bold mb-2">Location</h3>
+              <p className="text-white/80 mb-2">Main Office</p>
               <p className="text-lg">
-                Bedrettin Demirel Caddesi No:15<br />
-                Lefkoşa, Kuzey Kıbrıs
+                Şht Mustafa Mehmet St. No:28<br />
+                Göçmenköy, Nicosia, 99010
               </p>
             </CardContent>
           </Card>
@@ -69,7 +69,7 @@ export const ContactSection = () => {
                     <Globe className="h-6 w-6 text-white" />
                   </div>
                   <div className="text-left">
-                    <h4 className="text-lg font-semibold">Online Mağaza</h4>
+                    <h4 className="text-lg font-semibold">Online Store</h4>
                     <p className="text-white/80">store.erelelectrical.com</p>
                   </div>
                 </div>
@@ -83,8 +83,8 @@ export const ContactSection = () => {
                     <Clock className="h-6 w-6 text-white" />
                   </div>
                   <div className="text-left">
-                    <h4 className="text-lg font-semibold">Acil Destek</h4>
-                    <p className="text-white/80">7/24 Teknik Destek Hattı</p>
+                    <h4 className="text-lg font-semibold">Working Hours</h4>
+                    <p className="text-white/80">Monday - Saturday: 8:00 - 17:00</p>
                   </div>
                 </div>
               </CardContent>
@@ -95,14 +95,14 @@ export const ContactSection = () => {
         {/* CTA */}
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">
-            Projeleriniz için teklif almaya hazır mısınız?
+            Looking for Quotation?
           </h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-accent hover:bg-accent-dark transition-smooth shadow-glow">
-              Teklif Talep Et
+              Send an E-mail
             </Button>
             <Button variant="outline" size="lg" className="border-white hover:bg-white transition-smooth text-slate-950">
-              Katalog İndir
+              Call Us
             </Button>
           </div>
         </div>

@@ -7,37 +7,37 @@ import cyprusMapSvg from "@/assets/cyprus-map.svg";
 const branches = [
   {
     id: "lefkosa",
-    name: "Lefkoşa Merkez Şube",
+    name: "Nicosia Branch",
     city: "Nicosia",
-    address: "Bedrettin Demirel Caddesi No:15, Lefkoşa",
-    phone: "+90 392 227 55 00",
-    email: "lefkosa@erelelectrical.com",
-    hours: "Pazartesi - Cumartesi: 08:00 - 18:00",
-    description: "Ana merkez şubemiz ve ana depo tesisimiz",
+    address: "Şht. Mustafa Mehmet St., No:28, Göçmenköy, Nicosia",
+    phone: "+90 392 223 87 21 / 22",
+    email: "info@erelelectrical.com",
+    hours: "Pazartesi - Cumartesi: 08:00 - 17:00",
+    description: "Main store and warehouse",
     position: { x: 570, y: 330 }, // Updated for real SVG coordinates
     image: null // Will add branch images later
   },
   {
     id: "girne",
-    name: "Girne Şubesi",
+    name: "Kyrenia Branch",
     city: "Kyrenia", 
-    address: "Karaoğlanoğlu Caddesi No:42, Girne",
-    phone: "+90 392 815 25 30",
-    email: "girne@erelelectrical.com",
-    hours: "Pazartesi - Cumartesi: 08:30 - 17:30",
-    description: "Kuzey Kıbrıs bölgesi hizmet merkezi",
+    address: "İnönü St. No:15, Kyrenia",
+    phone: "+90 392 815 29 96",
+    email: "info@erelelectrical.com",
+    hours: "Pazartesi - Cuma: 08:00 - 17:00, Cumartesi: 8:00 - 13:00",
+    description: "Kyrenia sales office and warehouse",
     position: { x: 490, y: 220 }, // Updated for real SVG coordinates
     image: null
   },
   {
     id: "magusa",
-    name: "Mağusa Şubesi",
+    name: "Famagusta Branch",
     city: "Famagusta",
-    address: "Salamis Yolu Üzeri No:88, Mağusa",
-    phone: "+90 392 366 78 90",
-    email: "magusa@erelelectrical.com", 
-    hours: "Pazartesi - Cumartesi: 08:00 - 18:00",
-    description: "2026'da açılacak Kıbrıs'ın en büyük elektrik ve aydınlatma şubesi",
+    address: "Opposite Mağusa State Hospital, on Salamis Road, Famagusta",
+    phone: "Very Soon",
+    email: "info@erelelectrical.com", 
+    hours: "Very Soon",
+    description: "The largest store of its kind",
     position: { x: 850, y: 380 }, // Updated for real SVG coordinates
     image: null
   }
@@ -53,10 +53,10 @@ export const CyprusMap = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Şubelerimiz
+            Our Stores
           </h2>
           <p className="text-xl text-muted-foreground">
-            Kıbrıs genelinde size en yakın şubemizi keşfedin
+            Discover our closest store across Cyprus.
           </p>
         </div>
 
@@ -103,7 +103,7 @@ export const CyprusMap = () => {
 
             <div className="mt-6 text-center">
               <p className="text-sm text-muted-foreground">
-                Şube detaylarını görmek için harita üzerindeki noktaları tıklayın
+                Select a point on the map to view branch information
               </p>
             </div>
           </div>
@@ -181,7 +181,7 @@ export const CyprusMap = () => {
                     Şube Seçin
                   </h3>
                   <p className="text-muted-foreground">
-                    Harita üzerindeki noktalardan birini tıklayarak şube bilgilerini görüntüleyin
+                    Select a point on the map to view branch information.
                   </p>
                 </CardContent>
               </Card>
