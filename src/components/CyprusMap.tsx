@@ -125,15 +125,15 @@ export const CyprusMap = () => {
                   </Button>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  {/* Branch Image Area */}
+                  {/* Branch Location Map */}
                   <div className="mb-6">
-                    <div className="w-full h-32 bg-muted rounded-lg flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
-                      <div className="text-center text-muted-foreground">
-                        <Building className="h-8 w-8 mx-auto mb-2" />
-                        <p className="text-sm">Şube Görseli</p>
-                        <p className="text-xs">(Yakında eklenecek)</p>
-                      </div>
-                    </div>
+                    <iframe
+                      src={`https://maps.google.com/maps?q=${encodeURIComponent(selectedBranchData.address)}&output=embed`}
+                      className="w-full h-64 rounded-lg border-2 border-muted"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title={`${selectedBranchData.name} Konumu`}
+                    />
                   </div>
 
                   <p className="text-muted-foreground">
