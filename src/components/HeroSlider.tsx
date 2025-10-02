@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import heroWarehouse from "@/assets/hero-electrical-warehouse.jpg";
 import heroSolar from "@/assets/hero-solar-installation.jpg";
 import heroLighting from "@/assets/hero-lighting-showroom.jpg";
-import { styleText } from "util";
+
 
 const slides = [
   {
@@ -70,12 +70,9 @@ export const HeroSlider = () => {
         return (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-all duration-700 ease-in-out ${position}`}
+            className={`absolute inset-0 transition-all duration-700 ease-in-out ${position} bg-center bg-no-repeat bg-contain lg:bg-cover`}
             style={{
               backgroundImage: `url(${slide.image})`,
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
             }}
           >
             <div className="container mx-auto px-6 h-full flex items-center">
