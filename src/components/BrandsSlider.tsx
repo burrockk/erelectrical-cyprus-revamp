@@ -62,10 +62,10 @@ export const BrandsSlider = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Çalıştığımız Markalar
+            Brands We Proudly Work With
           </h2>
           <p className="text-xl text-muted-foreground">
-            Dünya çapında tanınmış markaların Kıbrıs distribütörüyüz
+            We are the official distributor of globally recognized brands in North Cyprus.
           </p>
         </div>
 

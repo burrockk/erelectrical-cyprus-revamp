@@ -3,23 +3,23 @@ import { Award, Clock, Users, Truck } from "lucide-react";
 const advantages = [
   {
     icon: Award,
-    title: "70 Yıllık Deneyim",
-    description: "1954'ten beri sektörde güvenilir ve kaliteli hizmet sunuyoruz"
+    title: "Trustworthy Company",
+    description: "Family business that has not compromised on ethical values and principles since 1942"
   },
   {
     icon: Users,
-    title: "Uzman Ekip",
-    description: "Alanında uzman teknik personelimizle profesyonel destek"
+    title: "Quality",
+    description: "No lower or middle class - only top quality products"
   },
   {
     icon: Truck,
-    title: "Hızlı Teslimat",
-    description: "Kıbrıs genelinde hızlı ve güvenli teslimat ağımız"
+    title: "Reasonable Prices",
+    description: "1st class products are offered for the most affordable prices"
   },
   {
     icon: Clock,
-    title: "7/24 Destek",
-    description: "Kesintisiz müşteri hizmetleri ve teknik destek"
+    title: "The Most Relaible Brands",
+    description: "The most trusted brands on a global level with proven track records"
   }
 ];
 
@@ -36,12 +36,13 @@ export const WhyErelSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-6">
-            Neden Erel Electrical?
+            Why Erel Electrical?
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Kıbrıs'ın en büyük elektrik distribütörü olarak, müşterilerimize 
-            kaliteli ürünler ve mükemmel hizmet sunma konusundaki kararlılığımız 
-            bizi sektörde lider yapmıştır.
+            Every product we trade is imported by ourselves. All types of electrical
+            cables and pipes which are economically viable to produce in North Cyprus
+            are produced in our own facilities. Thus, we make sure of the quality of everything
+            we offer and supply them at the most affordable prices.
           </p>
         </div>
 
@@ -67,11 +68,10 @@ export const WhyErelSection = () => {
         <div className="mt-16 text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <h3 className="text-3xl font-bold text-white mb-4">
-              Binlerce Mutlu Müşteri
+              Wide Product Range
             </h3>
             <p className="text-white/90 text-lg">
-              Konut projelerinden endüstriyel tesislere kadar geniş bir yelpazede 
-              çözümler sunarak müşteri memnuniyetini her zaman ön planda tutuyoruz.
+              Thousands of electrical, lighting and solar energy products
             </p>
           </div>
         </div>
