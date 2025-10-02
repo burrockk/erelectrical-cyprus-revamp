@@ -57,7 +57,7 @@ export const HeroSlider = () => {
   };
 
   return (
-    <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen overflow-hidden bg-muted/20">
+    <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen overflow-hidden bg-background">
       {slides.map((slide, index) => {
         let position = "translate-x-full opacity-0";
         
@@ -70,13 +70,14 @@ export const HeroSlider = () => {
         return (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-all duration-700 ease-in-out ${position} flex items-center justify-center`}
+            className={`absolute inset-0 transition-all duration-700 ease-in-out ${position}`}
+            style={{
+              backgroundImage: `url(${slide.image})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
           >
-            <img 
-              src={slide.image} 
-              alt={`Slide ${slide.id}`}
-              className="w-full h-full object-contain"
-            />
             <div className="container mx-auto px-6 h-full flex items-center">
               <div className={`max-w-3xl text-white transition-opacity duration-500 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}>
                 <h1 className="text-6xl font-bold mb-6 leading-tight">
