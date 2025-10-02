@@ -57,7 +57,7 @@ export const HeroSlider = () => {
   };
 
   return (
-    <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-screen overflow-hidden">
+    <div className="relative h-screen overflow-hidden">
       {slides.map((slide, index) => {
         let position = "translate-x-full opacity-0";
         
@@ -74,11 +74,10 @@ export const HeroSlider = () => {
             style={{
               backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(${slide.image})`,
               backgroundSize: "cover",
-              backgroundPosition: "center center",
-              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
             }}
           >
-            <div className="container mx-auto px-4 sm:px-6 h-full flex items-center">
+            <div className="container mx-auto px-6 h-full flex items-center">
               <div className={`max-w-3xl text-white transition-opacity duration-500 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}>
                 <h1 className="text-6xl font-bold mb-6 leading-tight">
                   {/*slide.title*/}
