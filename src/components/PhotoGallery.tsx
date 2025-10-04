@@ -15,56 +15,56 @@ const galleryImages = [
   {
     id: 1,
     image: gallerySolar,
-    title: "Solar Enerji Sistemleri",
-    description: "Profesyonel güneş enerjisi kurulumları"
+    title: "Solar Panel Farm",
+    description: "We use solar energy to power our facilities"
   },
   {
     id: 2,
     image: galleryLightingShowroom,
-    title: "Aydınlatma Showroom",
-    description: "Zengin aydınlatma ürün yelpazesi"
+    title: "Nicosia Showroom",
+    description: ""
   },
   {
     id: 3,
     image: galleryShowroomExterior,
-    title: "Modern Showroom",
-    description: "Çağdaş mağaza tasarımımız"
+    title: "Nicosia Showroom Exterior",
+    description: ""
   },
   {
     id: 4,
     image: galleryLightingDisplay,
-    title: "Aydınlatma Koleksiyonu",
-    description: "Geniş ürün çeşitliliği"
+    title: "Nicosia Showroom 3",
+    description: "Extensive Lighting Options"
   },
   {
     id: 5,
     image: galleryCables,
-    title: "Kablo ve Elektrik Malzemeleri",
-    description: "Kapsamlı stok çeşitliliği"
+    title: "NYA Cables",
+    description: "Variety of Sizes and Types"
   },
   {
     id: 6,
     image: galleryWarehouse,
-    title: "Modern Depo Tesisimiz",
-    description: "Organize lojistik altyapı"
+    title: "Nicosia Warehouse",
+    description: "Extensive Inventory"
   },
   {
     id: 7,
     image: galleryFacility,
-    title: "Lojistik Merkezi",
-    description: "Geniş depolama kapasitesi"
+    title: "Yerolakko Warehouse",
+    description: "Spacious Storage"
   },
   {
     id: 8,
     image: galleryCableReels,
-    title: "Kablo Stok Alanı",
-    description: "Profesyonel kablo tedariki"
+    title: "Nicosia Warehouse Armored Cables",
+    description: "High Quality Cables"
   },
   {
     id: 9,
     image: galleryStorage,
-    title: "Organize Depolama",
-    description: "Verimli stok yönetimi"
+    title: "Nicosia Warehouse Wholesale",
+    description: "Wholesale Products"
   }
 ];
 
@@ -77,9 +77,9 @@ export const PhotoGallery = () => {
     <section className="py-20 bg-gradient-to-b from-background to-accent/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Tesislerimiz</h2>
+          <h2 className="text-4xl font-bold mb-4">Gallery</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Modern altyapımız ve geniş ürün yelpazemizle Kıbrıs'ın en büyük elektrik distribütörüyüz
+            We are the leading supplier of electrical products in North Cyprus. Here are some photos
           </p>
         </div>
         
@@ -101,7 +101,7 @@ export const PhotoGallery = () => {
                       alt={item.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/0 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                       <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                       <p className="text-sm text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

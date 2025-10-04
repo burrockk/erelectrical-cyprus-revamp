@@ -64,7 +64,7 @@ export const CyprusMap = () => {
           {/* Map */}
           <div className="relative bg-white rounded-2xl shadow-card p-8">
             <h3 className="text-2xl font-bold text-center mb-8 text-foreground">
-              Kıbrıs Haritası
+              Select a Branch
             </h3>
             
             {/* Real Cyprus SVG Map */}

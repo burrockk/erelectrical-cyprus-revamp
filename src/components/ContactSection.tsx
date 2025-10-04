@@ -9,7 +9,7 @@ export const ContactSection = () => {
             Contact Us
           </h2>
           <p className="text-xl text-white/90">
-            Bizimle iletişime geçin, profesyonel ekibimiz size yardımcı olmaktan mutluluk duyacaktır
+            We're here to assist you. Reach out to us through any of the following methods.
           </p>
         </div>
 
