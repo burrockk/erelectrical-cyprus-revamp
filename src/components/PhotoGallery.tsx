@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import gallerySolar from "@/assets/gallery-solar.webp";
@@ -68,6 +69,10 @@ const galleryImages = [
 ];
 
 export const PhotoGallery = () => {
+  const plugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false })
+  );
+
   return (
     <section className="py-20 bg-gradient-to-b from-background to-accent/5">
       <div className="container mx-auto px-4">
@@ -84,11 +89,7 @@ export const PhotoGallery = () => {
               align: "start",
               loop: true,
             }}
-            plugins={[
-              Autoplay({
-                delay: 4000,
-              }),
-            ]}
+            plugins={[plugin.current]}
             className="w-full"
           >
             <CarouselContent>
