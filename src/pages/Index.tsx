@@ -7,6 +7,7 @@ import { BrandsSlider } from "@/components/BrandsSlider";
 import { Timeline } from "@/components/Timeline";
 import { CyprusMap } from "@/components/CyprusMap";
 import { ContactSection } from "@/components/ContactSection";
+import { PhotoGallery } from "@/components/PhotoGallery";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <OnlineStoreBanner />
       <SectorsSection />
       <WhyErelSection />
+      <PhotoGallery />
       <BrandsSlider />
       <Timeline />
       <CyprusMap />
