@@ -8,6 +8,7 @@ import { Timeline } from "@/components/Timeline";
 import { CyprusMap } from "@/components/CyprusMap";
 import { ContactSection } from "@/components/ContactSection";
 import { PhotoGallery } from "@/components/PhotoGallery";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <Timeline />
       <CyprusMap />
       <ContactSection />
+      <Footer />
     </div>
   );
 };
