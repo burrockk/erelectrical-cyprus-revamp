@@ -36,7 +36,7 @@ const sectors = [
       "Outdoor lighting",
       "Solar lighting",
     ],
-    gradient: "from-accent to-accent-light"
+    gradient: "from-primary to-primary-light"
   }
 ];
 

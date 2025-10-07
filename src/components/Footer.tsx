@@ -1,5 +1,5 @@
 import { Facebook, Instagram } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/footer-logo.png";
 
 export const Footer = () => {
   return (
@@ -11,7 +11,7 @@ export const Footer = () => {
             <img 
               src={logo} 
               alt="Erel Electric Logo" 
-              className="h-24 w-auto object-contain"
+              className="h-[145px] w-auto object-contain"
             />
           </div>
 

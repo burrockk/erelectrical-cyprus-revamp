@@ -178,7 +178,7 @@ export const CyprusMap = () => {
                 <CardContent className="text-center py-12">
                   <MapPin className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-foreground mb-2">
-                    Şube Seçin
+                    Select a Branch
                   </h3>
                   <p className="text-muted-foreground">
                     Select a point on the map to view branch information.

@@ -54,7 +54,7 @@ const timelineEvents = [
   {
     year: "2026",
     title: "The Biggest",
-    description: "We proudly opened our Mağusa branch — the largest store of its kind in Cyprus, offering the widest selection of products in the industry and redefining the shopping experience.",
+    description: "We proudly opened our Mağusa branch — the largest store of its kind in North Cyprus, offering the widest selection of products in the industry and redefining the shopping experience.",
     icon: MapPin,
     color: "from-solar to-accent-light"
   }
