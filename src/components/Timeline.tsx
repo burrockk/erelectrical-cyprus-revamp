@@ -4,7 +4,7 @@ import { Building, Factory, Zap, MapPin } from "lucide-react";
 const timelineEvents = [
   {
     year: "1942",
-    title: "Kuruluş",
+    title: "Starting Point",
     description: "Foundations of our family-owned business were first laid in 1942 by Dervis Erel in Nicosia. Production and distribution of general construction materials have been our main dealings for many years.",
     icon: Building,
     color: "from-primary to-primary-light"
@@ -14,28 +14,28 @@ const timelineEvents = [
     title: "New Milestone",
     description: "We started importing electrical and lighting products from the biggest companies all over the world. This was a major milestone for our company and the first step we took becoming a leading company in the local market.",
     icon: Zap,
-    color: "from-accent to-accent-light"
+    color: "from-solar to-accent"
   },
   {
     year: "2011",
     title: "Manufacturing",
     description: "Our first production line for energy cables was constructed. Our cable insulations are above standards. We keep the cable resistance low and flexibility high.",
     icon: Factory,
-    color: "from-solar to-accent"
+    color: "from-primary to-primary-light"
   },
   {
     year: "2016",
     title: "Growing",
     description: "Our second sales office in Kyrenia was opened. We expanded our distribution network. We sustain our highest level of service and quality in all our branches.",
     icon: MapPin,
-    color: "from-primary-light to-accent"
+    color: "from-solar to-accent-light"
   },
   {
     year: "2019",
     title: "Innovating",
     description: "We set up an electrical pipes manufacturing facility with cutting-edge technology machinery.",
     icon: Factory,
-    color: "from-accent to-primary"
+    color: "from-primary to-primary-light"
   },
   {
     year: "2020",
@@ -49,14 +49,14 @@ const timelineEvents = [
     title: "Medium Voltage",
     description: "We started importing and distributing medium voltage cables, transformers and components.",
     icon: Zap,
-    color: "from-primary to-accent"
+    color: "from-primary to-primary-light"
   },
   {
     year: "2026",
     title: "The Biggest",
     description: "We proudly opened our Mağusa branch — the largest store of its kind in Cyprus, offering the widest selection of products in the industry and redefining the shopping experience.",
     icon: MapPin,
-    color: "from-accent to-solar"
+    color: "from-solar to-accent-light"
   }
 ];
 

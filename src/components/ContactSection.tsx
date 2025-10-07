@@ -98,12 +98,16 @@ export const ContactSection = () => {
             Looking for Quotation?
           </h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:info@erelelectrical.com">
             <Button size="lg" className="bg-gradient-accent hover:bg-accent-dark transition-smooth shadow-glow">
               Send an E-mail
             </Button>
-            <Button variant="outline" size="lg" className="border-white hover:bg-white transition-smooth text-slate-950">
+            </a>
+            <a href="tel:+903922238721">
+            <Button size="lg" className="bg-gradient-primary hover:bg-accent-dark transition-smooth text-white shadow-glow">
               Call Us
             </Button>
+            </a>
           </div>
         </div>
       </div>

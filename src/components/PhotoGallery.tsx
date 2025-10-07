@@ -1,15 +1,15 @@
 import { useRef } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import gallerySolar from "@/assets/gallery-solar.webp";
-import galleryLightingShowroom from "@/assets/gallery-lighting-showroom.webp";
-import galleryWarehouse from "@/assets/gallery-warehouse.webp";
-import galleryCables from "@/assets/gallery-cables.webp";
-import galleryFacility from "@/assets/gallery-facility.webp";
-import galleryCableReels from "@/assets/gallery-cable-reels.webp";
-import galleryLightingDisplay from "@/assets/gallery-lighting-display.webp";
-import galleryShowroomExterior from "@/assets/gallery-showroom-exterior.webp";
-import galleryStorage from "@/assets/gallery-storage.webp";
+import gallerySolar from "@/assets/gallery-solar.jpg";
+import galleryLightingShowroom from "@/assets/gallery-lighting-showroom.jpg";
+import galleryWarehouse from "@/assets/gallery-warehouse.jpg";
+import galleryCables from "@/assets/gallery-cables.jpg";
+import galleryFacility from "@/assets/gallery-facility.jpg";
+import galleryCableReels from "@/assets/gallery-cable-reels.jpg";
+import galleryLightingDisplay from "@/assets/gallery-lighting-display.jpg";
+import galleryShowroomExterior from "@/assets/gallery-showroom-exterior.jpg";
+import galleryStorage from "@/assets/gallery-storage.jpg";
 
 const galleryImages = [
   {
