@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Building, Factory, Zap, MapPin } from "lucide-react";
+import { Building, Factory, Zap, MapPin, Expand, Milestone, ArrowBigUpDash } from "lucide-react";
 
 const timelineEvents = [
   {
@@ -13,7 +13,7 @@ const timelineEvents = [
     year: "2010", 
     title: "New Milestone",
     description: "We started importing electrical and lighting products from the biggest companies all over the world. This was a major milestone for our company and the first step we took becoming a leading company in the local market.",
-    icon: Zap,
+    icon: Milestone,
     color: "from-solar to-accent"
   },
   {
@@ -41,7 +41,7 @@ const timelineEvents = [
     year: "2020",
     title: "Expanding",
     description: "We started importing and distributing solar energy products. Partnered with TIER 1 solar energy brands. We have become a major player in the renewable energy sector.",
-    icon: Zap,
+    icon: Expand,
     color: "from-solar to-accent-light"
   },
   {
@@ -55,7 +55,7 @@ const timelineEvents = [
     year: "2026",
     title: "The Biggest",
     description: "We proudly opened our Mağusa branch — the largest store of its kind in North Cyprus, offering the widest selection of products in the industry and redefining the shopping experience.",
-    icon: MapPin,
+    icon: ArrowBigUpDash,
     color: "from-solar to-accent-light"
   }
 ];
