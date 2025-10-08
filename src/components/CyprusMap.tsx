@@ -14,8 +14,9 @@ const branches = [
     email: "info@erelelectrical.com",
     hours: "Pazartesi - Cumartesi: 08:00 - 17:00",
     description: "Main store and warehouse",
-    position: { x: 570, y: 330 }, // Updated for real SVG coordinates
-    image: null // Will add branch images later
+    position: { x: 570, y: 330 },
+    mapCoordinates: "35.2332,33.3547", // Manuel koordinatlar (latitude,longitude)
+    image: null
   },
   {
     id: "girne",
@@ -26,7 +27,8 @@ const branches = [
     email: "info@erelelectrical.com",
     hours: "Pazartesi - Cuma: 08:00 - 17:00, Cumartesi: 8:00 - 13:00",
     description: "Kyrenia sales office and warehouse",
-    position: { x: 490, y: 220 }, // Updated for real SVG coordinates
+    position: { x: 490, y: 220 },
+    mapCoordinates: "35.3410,33.3190", // Manuel koordinatlar
     image: null
   },
   {
@@ -38,7 +40,8 @@ const branches = [
     email: "info@erelelectrical.com", 
     hours: "Very Soon",
     description: "The largest store of its kind",
-    position: { x: 850, y: 380 }, // Updated for real SVG coordinates
+    position: { x: 850, y: 380 },
+    mapCoordinates: "35.1264,33.9403", // Manuel koordinatlar
     image: null
   }
 ];
@@ -128,7 +131,7 @@ export const CyprusMap = () => {
                   {/* Branch Location Map */}
                   <div className="mb-6">
                     <iframe
-                      src={`https://maps.google.com/maps?q=${encodeURIComponent(selectedBranchData.address)}&output=embed`}
+                      src={`https://maps.google.com/maps?q=${selectedBranchData.mapCoordinates}&output=embed`}
                       className="w-full h-64 rounded-lg border-2 border-muted"
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
