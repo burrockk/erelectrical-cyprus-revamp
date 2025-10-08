@@ -15,8 +15,7 @@ const branches = [
     hours: "Pazartesi - Cumartesi: 08:00 - 17:00",
     description: "Main store and warehouse",
     position: { x: 570, y: 330 },
-    mapEmbedUrl: "", // Google Maps embed linki buraya
-    image: null
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.963161324797!2d33.33764647644948!3d35.20738655585704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de10d7cb64729f%3A0xd5459079374a2e8b!2sErel%20Elektrik%20Malzemeleri!5e0!3m2!1sen!2s!4v1759931249483!5m2!1sen!2s%22%20width=%22600%22%20height=%22450%22%20style=%22border:0;%22%20allowfullscreen=%22%22%20loading=%22lazy%22%20referrerpolicy=%22no-referrer-when-downgrade", // Google Maps embed linki buraya
   },
   {
     id: "girne",
@@ -28,8 +27,8 @@ const branches = [
     hours: "Pazartesi - Cuma: 08:00 - 17:00, Cumartesi: 8:00 - 13:00",
     description: "Kyrenia sales office and warehouse",
     position: { x: 490, y: 220 },
-    mapEmbedUrl: "", // Google Maps embed linki buraya
-    image: null
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.844830082775!2d33.31539487645329!3d35.33467454893244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de6cccfc2c0b59%3A0xe56af310f6490dee!2sErel%20%C4%B0n%C5%9Faat%20Malzemeleri!5e0!3m2!1sen!2sus!4v1759931395123!5m2!1sen!2sus", // Google Maps embed linki buraya
+    
   },
   {
     id: "magusa",
@@ -41,8 +40,8 @@ const branches = [
     hours: "Very Soon",
     description: "The largest store of its kind",
     position: { x: 850, y: 380 },
-    mapEmbedUrl: "", // Google Maps embed linki buraya
-    image: null
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d376.42211611770955!2d33.90504641605066!3d35.155122534494154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgaleri!5e0!3m2!1sen!2s!4v1759934689836!5m2!1sen!2s", // Google Maps embed linki buraya
+    
   }
 ];
 
@@ -129,6 +128,17 @@ export const CyprusMap = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {/* Branch Location Map */}
+                  {selectedBranchData.mapEmbedUrl && (
+                    <div className="mb-6">
+                      <iframe
+                        src={selectedBranchData.mapEmbedUrl}
+                        className="w-full h-64 rounded-lg border-2 border-muted"
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title={`${selectedBranchData.name} Konumu`}
+                      />
+                    </div>
+                  )}
                   {selectedBranchData.mapEmbedUrl && (
                     <div className="mb-6">
                       <iframe
