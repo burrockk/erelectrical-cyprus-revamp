@@ -15,7 +15,7 @@ const branches = [
     hours: "Pazartesi - Cumartesi: 08:00 - 17:00",
     description: "Main store and warehouse",
     position: { x: 570, y: 330 },
-    mapEmbedUrl: "", // Google Maps embed linki buraya
+    mapCoordinates: "35.207488218664984, 33.34021149955169", // Manuel koordinatlar (latitude,longitude)
     image: null
   },
   {
@@ -28,7 +28,7 @@ const branches = [
     hours: "Pazartesi - Cuma: 08:00 - 17:00, Cumartesi: 8:00 - 13:00",
     description: "Kyrenia sales office and warehouse",
     position: { x: 490, y: 220 },
-    mapEmbedUrl: "", // Google Maps embed linki buraya
+    mapCoordinates: "35.33493274587295, 33.31799125467208", // Manuel koordinatlar
     image: null
   },
   {
@@ -41,7 +41,7 @@ const branches = [
     hours: "Very Soon",
     description: "The largest store of its kind",
     position: { x: 850, y: 380 },
-    mapEmbedUrl: "", // Google Maps embed linki buraya
+    mapCoordinates: "35.15514519126109, 33.90499890651989", // Manuel koordinatlar
     image: null
   }
 ];
@@ -129,17 +129,15 @@ export const CyprusMap = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {/* Branch Location Map */}
-                  {selectedBranchData.mapEmbedUrl && (
-                    <div className="mb-6">
-                      <iframe
-                        src={selectedBranchData.mapEmbedUrl}
-                        className="w-full h-64 rounded-lg border-2 border-muted"
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title={`${selectedBranchData.name} Konumu`}
-                      />
-                    </div>
-                  )}
+                  <div className="mb-6">
+                    <iframe
+                      src={`https://maps.google.com/maps?q=${selectedBranchData.mapCoordinates}&output=embed`}
+                      className="w-full h-64 rounded-lg border-2 border-muted"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title={`${selectedBranchData.name} Konumu`}
+                    />
+                  </div>
 
                   <p className="text-muted-foreground">
                     {selectedBranchData.description}
