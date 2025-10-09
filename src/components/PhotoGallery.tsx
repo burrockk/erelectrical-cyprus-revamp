@@ -10,6 +10,9 @@ import galleryCableReels from "@/assets/gallery-cable-reels.jpg";
 import galleryLightingDisplay from "@/assets/gallery-lighting-display.jpg";
 import galleryShowroomExterior from "@/assets/gallery-showroom-exterior.jpg";
 import galleryStorage from "@/assets/gallery-storage.jpg";
+import mediumClose from "@/assets/medium-close.jpg";
+import cableGeneral from "@/assets/cable-general.jpg";
+import galleryUnloading from "@/assets/gallery-unloading.jpg";
 
 const galleryImages = [
   {
@@ -65,7 +68,26 @@ const galleryImages = [
     image: galleryStorage,
     title: "Nicosia Warehouse Wholesale",
     description: "Wholesale Products"
+  },
+  {
+    id: 10,
+    image: mediumClose,
+    title: "Medium Voltage Cable Stocks",
+    description: ""
+  },
+  {
+    id: 11,
+    image: cableGeneral,
+    title: "Aromored Cable Stocks",
+    description: ""
+  },
+  {
+    id: 12,
+    image: galleryUnloading,
+    title: "Always in Stock",
+    description: ""
   }
+  
 ];
 
 export const PhotoGallery = () => {
@@ -74,7 +96,7 @@ export const PhotoGallery = () => {
   );
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-accent/5">
+    <section id="gallery" className="py-20 bg-gradient-to-b from-background to-accent/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Gallery</h2>

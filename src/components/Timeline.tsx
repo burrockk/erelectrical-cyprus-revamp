@@ -64,7 +64,7 @@ export const Timeline = () => {
   const [activeEvent, setActiveEvent] = useState(0);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-muted to-white">
+    <section id="timeline" className="py-20 bg-gradient-to-br from-muted to-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
