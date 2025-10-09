@@ -5,6 +5,7 @@ import { SectorsSection } from "@/components/SectorsSection";
 import { WhyErelSection } from "@/components/WhyErelSection";
 import { BrandsSlider } from "@/components/BrandsSlider";
 import { Timeline } from "@/components/Timeline";
+import { InvestmentsSection } from "@/components/InvestmentsSection";
 import { CyprusMap } from "@/components/CyprusMap";
 import { ContactSection } from "@/components/ContactSection";
 import { PhotoGallery } from "@/components/PhotoGallery";
@@ -21,6 +22,7 @@ const Index = () => {
       <PhotoGallery />
       <BrandsSlider />
       <Timeline />
+      <InvestmentsSection />
       <CyprusMap />
       <ContactSection />
       <Footer />
