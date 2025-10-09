@@ -48,13 +48,16 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <div 
+            onClick={() => scrollToSection("top")} 
+            className="flex items-center space-x-3 cursor-pointer"
+          >
             <img src={logo} alt="Erel Electrical Logo" className="h-14 w-auto" />
             <div>
               <h1 className="text-xl font-bold text-foreground">Erel Electrical</h1>
               <p className="text-sm text-muted-foreground">Electrical • Lighting • Solar</p>
             </div>
-          </Link>
+          </div>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
