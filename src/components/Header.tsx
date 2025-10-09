@@ -34,7 +34,8 @@ const Header = () => {
       name: "About Us",
       sectionId: "about",
       subItems: [
-        { name: "Our History", sectionId: "timeline" }
+        { name: "Our History", sectionId: "timeline" },
+        { name: "Investments", sectionId: "investments" } // Yeni subcategory eklendi
       ]
     },
     { name: "Gallery", sectionId: "gallery" },
