@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://erelelectrical.com/sitemap.xml

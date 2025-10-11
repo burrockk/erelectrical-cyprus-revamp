@@ -1,7 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2, Warehouse, TrendingUp } from "lucide-react";
 import galleryShowroomExterior from "@/assets/gallery-showroom-exterior.jpg";
-
+import new_warehouse from "@/assets/new-warehouse.jpg";
+import carwheel from "@/assets/carwheel.jpg";
 const investments = [
 	{
 		id: 1,
@@ -17,17 +18,19 @@ const investments = [
 		id: 2,
 		title: "New Warehouse is Under Construction",
 		description:
-			"Expanding our storage capacity to better serve our growing customer base",
+			"We are building a new warehouse in Yerolakkos. Expanding our storage capacity to better serve our growing customer base",
+		image: new_warehouse,
 		icon: Warehouse,
-		hasImage: false,
+		hasImage: true,
 	},
 	{
 		id: 3,
 		title: "Adding New Sector to Our Business",
 		description:
-			"Diversifying our product range to meet evolving market demands",
+			"We are getting ready to import and wholesale car tires. Diversifying our product	range to meet evolving market demands.",
+		image: carwheel,
 		icon: TrendingUp,
-		hasImage: false,
+		hasImage: true,
 	},
 ];
 
@@ -44,7 +47,7 @@ export const InvestmentsSection = () => {
 				<div className="text-center mb-16 animate-fade-in">
 					<div className="inline-block mb-4">
 						<span className="text-sm font-semibold text-primary bg-primary/10 px-4 py-2 rounded-full">
-							Our Growth Story
+							Growing Non-Stop
 						</span>
 					</div>
 					<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
@@ -86,7 +89,7 @@ export const InvestmentsSection = () => {
 													alt={investment.title}
 													className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
 												/>
-												<div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
+												<div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/5 to-transparent" />
 
 												{/* Icon Badge */}
 												<div className="absolute top-4 right-4 bg-accent text-accent-foreground p-3 rounded-lg shadow-lg">
