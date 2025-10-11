@@ -69,13 +69,13 @@ export const InvestmentsSection = () => {
 				{/* Two Column Layout */}
 				<div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
 					{/* Left Column - Investment Cards */}
-					<div className="grid md:grid-cols-2 gap-4">
+					<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 						{investments.map((investment, index) => {
 						const Icon = investment.icon;
 						return (
 							<Card
 								key={investment.id}
-								className="group relative overflow-hidden border-2 border-transparent hover:border-primary/20 transition-all duration-500 hover:shadow-elegant h-64"
+								className="group relative overflow-hidden border-2 border-transparent hover:border-primary/20 transition-all duration-500 hover:shadow-elegant h-64 sm:h-72"
 								style={{
 									animationDelay: `${index * 100}ms`,
 								}}

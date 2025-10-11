@@ -28,28 +28,29 @@ export const SalesChart = () => {
   return (
     <Card className="border-2 border-primary/10 bg-card/50 backdrop-blur-sm shadow-elegant">
       <CardHeader className="text-center pb-4">
-        <CardTitle className="text-3xl md:text-4xl font-bold">
+        <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold">
           <span className="text-foreground">Our Sales Per Year </span>
           <span className="bg-gradient-accent bg-clip-text text-transparent">in USD</span>
         </CardTitle>
       </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig} className="h-[500px] w-full">
-          <BarChart data={salesData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+      <CardContent className="px-2 sm:px-6">
+        <ChartContainer config={chartConfig} className="h-[300px] sm:h-[400px] lg:h-[500px] w-full">
+          <BarChart data={salesData} margin={{ top: 20, right: 10, left: 0, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.3} />
             <XAxis
               dataKey="year"
               stroke="hsl(var(--muted-foreground))"
-              fontSize={12}
+              fontSize={10}
               tickLine={false}
               axisLine={false}
             />
             <YAxis
               stroke="hsl(var(--muted-foreground))"
-              fontSize={12}
+              fontSize={10}
               tickLine={false}
               axisLine={false}
               tickFormatter={(value) => `$${(value / 1000000).toFixed(1)}M`}
+              width={60}
             />
             <ChartTooltip
               content={
@@ -68,7 +69,7 @@ export const SalesChart = () => {
                 position: "top",
                 formatter: (value: number) => `$${(value / 1000000).toFixed(1)}M`,
                 fill: "hsl(var(--foreground))",
-                fontSize: 11,
+                fontSize: 9,
               }}
             />
           </BarChart>
