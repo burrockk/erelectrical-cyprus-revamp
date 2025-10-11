@@ -4,6 +4,7 @@ import galleryShowroomExterior from "@/assets/gallery-showroom-exterior.jpg";
 import new_warehouse from "@/assets/new-warehouse.jpg";
 import carwheel from "@/assets/carwheel.jpg";
 import magusauzun from "@/assets/magusauzun.jpg";
+import { SalesChart } from "@/components/SalesChart";
 const investments = [
 	{
 		id: 1,
@@ -65,9 +66,11 @@ export const InvestmentsSection = () => {
 					</p>
 				</div>
 
-				{/* Investment Cards Grid */}
-				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-					{investments.map((investment, index) => {
+				{/* Two Column Layout */}
+				<div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+					{/* Left Column - Investment Cards */}
+					<div className="grid md:grid-cols-2 gap-4">
+						{investments.map((investment, index) => {
 						const Icon = investment.icon;
 						return (
 							<Card
@@ -161,9 +164,15 @@ export const InvestmentsSection = () => {
 							</Card>
 						);
 					})}
+					</div>
+
+					{/* Right Column - Sales Chart */}
+					<div className="lg:col-span-1">
+						<SalesChart />
+					</div>
 				</div>
 
-			{/*	Bottom CTA 
+			{/*	Bottom CTA
 				<div className="text-center mt-16 animate-fade-in">
 					<p className="text-muted-foreground text-lg">
 						Want to learn more about our growth plans?{" "}
