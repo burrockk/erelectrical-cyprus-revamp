@@ -84,39 +84,39 @@ export const InvestmentsSection = () => {
 								<div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
 
 								<CardContent className="p-0">
-									{investment.hasImage && investment.image ? (
-										<>
-											{/* Image Card with Overlay */}
-											<div className="relative h-64 overflow-hidden">
-												<img
-													src={investment.image}
-													alt={investment.title}
-													className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-												/>
-												<div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/10 to-transparent" />
+								{investment.hasImage && investment.image ? (
+									<>
+										{/* Image Card with Overlay */}
+										<div className="relative h-64 overflow-hidden">
+											<img
+												src={investment.image}
+												alt={investment.title}
+												className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+											/>
+											<div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
 
-												{/* Icon Badge */}
-												<div className="absolute top-4 right-4 bg-accent text-accent-foreground p-3 rounded-lg shadow-lg">
-													<Icon className="w-6 h-6" />
-												</div>
-
-												{/* Content Overlay */}
-												<div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground">
-													<h3 className="text-2xl font-bold mb-2">
-														{investment.title}
-													</h3>
-													{investment.subtitle && (
-														<p className="text-accent font-semibold text-lg mb-2">
-															{investment.subtitle}
-														</p>
-													)}
-													<p className="text-sm text-primary-foreground/90 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-														{investment.description}
-													</p>
-												</div>
+											{/* Icon Badge */}
+											<div className="absolute top-4 right-4 bg-accent text-accent-foreground p-3 rounded-lg shadow-lg">
+												<Icon className="w-6 h-6" />
 											</div>
-										</>
-									) : (
+
+											{/* Content Overlay - Starts at bottom, moves up on hover */}
+											<div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground transition-all duration-500 translate-y-0 group-hover:-translate-y-4">
+												<h3 className="text-2xl font-bold mb-2">
+													{investment.title}
+												</h3>
+												{investment.subtitle && (
+													<p className="text-accent font-semibold text-lg mb-3">
+														{investment.subtitle}
+													</p>
+												)}
+												<p className="text-sm text-primary-foreground/90 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-500">
+													{investment.description}
+												</p>
+											</div>
+										</div>
+									</>
+								) : (
 										<>
 											{/* Text Card */}
 											<div className="p-8 relative">
