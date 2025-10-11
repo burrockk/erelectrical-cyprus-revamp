@@ -3,14 +3,15 @@ import { Building2, Warehouse, TrendingUp } from "lucide-react";
 import galleryShowroomExterior from "@/assets/gallery-showroom-exterior.jpg";
 import new_warehouse from "@/assets/new-warehouse.jpg";
 import carwheel from "@/assets/carwheel.jpg";
+import magusauzun from "@/assets/magusauzun.jpg";
 const investments = [
 	{
 		id: 1,
 		title: "Famagusta Branch",
 		subtitle: "The biggest of its kind",
 		description:
-			"Our largest facility featuring state-of-the-art infrastructure and comprehensive product showrooms",
-		image: galleryShowroomExterior,
+			"Offering the widest selection of products in the industry and redefining the shopping experience.",
+		image: magusauzun,
 		icon: Building2,
 		hasImage: true,
 	},
@@ -89,7 +90,7 @@ export const InvestmentsSection = () => {
 													alt={investment.title}
 													className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
 												/>
-												<div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/5 to-transparent" />
+												<div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/10 to-transparent" />
 
 												{/* Icon Badge */}
 												<div className="absolute top-4 right-4 bg-accent text-accent-foreground p-3 rounded-lg shadow-lg">
@@ -162,7 +163,7 @@ export const InvestmentsSection = () => {
 					})}
 				</div>
 
-				{/* Bottom CTA */}
+			{/*	Bottom CTA 
 				<div className="text-center mt-16 animate-fade-in">
 					<p className="text-muted-foreground text-lg">
 						Want to learn more about our growth plans?{" "}
@@ -174,7 +175,9 @@ export const InvestmentsSection = () => {
 						</a>
 					</p>
 				</div>
+				*/}	
 			</div>
+			
 		</section>
 	);
 };
