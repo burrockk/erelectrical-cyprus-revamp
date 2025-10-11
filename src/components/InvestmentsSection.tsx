@@ -75,19 +75,18 @@ export const InvestmentsSection = () => {
 						return (
 							<Card
 								key={investment.id}
-								className="group relative overflow-hidden border-2 border-transparent hover:border-primary/20 transition-all duration-500 hover:shadow-elegant bg-card p-0"
+								className="group relative overflow-hidden border-2 border-transparent hover:border-primary/20 transition-all duration-500 hover:shadow-elegant h-64"
 								style={{
 									animationDelay: `${index * 100}ms`,
 								}}
 							>
 								{/* Gradient Overlay on Hover */}
-								<div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none" />
+								<div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none z-10" />
 
-								<CardContent className="p-0 h-full">
-									{investment.hasImage && investment.image ? (
+								{investment.hasImage && investment.image ? (
 									<>
 										{/* Image Card with Overlay */}
-										<div className="relative h-64 overflow-hidden">
+										<div className="relative h-full overflow-hidden">
 											<img
 												src={investment.image}
 												alt={investment.title}
@@ -115,11 +114,11 @@ export const InvestmentsSection = () => {
 												</p>
 											</div>
 										</div>
-									</>
-								) : (
+										</>
+									) : (
 										<>
 											{/* Text Card */}
-											<div className="p-8 relative">
+											<div className="p-8 relative h-full flex flex-col justify-center">
 												{/* Decorative Corner */}
 												<div className="absolute top-0 right-0 w-32 h-32 bg-gradient-primary opacity-10 rounded-bl-full" />
 
@@ -160,7 +159,6 @@ export const InvestmentsSection = () => {
 											</div>
 										</>
 									)}
-								</CardContent>
 							</Card>
 						);
 					})}
