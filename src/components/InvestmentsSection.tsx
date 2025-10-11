@@ -75,16 +75,16 @@ export const InvestmentsSection = () => {
 						return (
 							<Card
 								key={investment.id}
-								className="group relative overflow-hidden border-2 border-transparent hover:border-primary/20 transition-all duration-500 hover:shadow-elegant bg-card"
+								className="group relative overflow-hidden border-2 border-transparent hover:border-primary/20 transition-all duration-500 hover:shadow-elegant bg-card p-0"
 								style={{
 									animationDelay: `${index * 100}ms`,
 								}}
 							>
 								{/* Gradient Overlay on Hover */}
-								<div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+								<div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none" />
 
-								<CardContent className="p-0">
-								{investment.hasImage && investment.image ? (
+								<CardContent className="p-0 h-full">
+									{investment.hasImage && investment.image ? (
 									<>
 										{/* Image Card with Overlay */}
 										<div className="relative h-64 overflow-hidden">
