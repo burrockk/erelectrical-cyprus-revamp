@@ -4,7 +4,7 @@ import galleryShowroomExterior from "@/assets/gallery-showroom-exterior.jpg";
 import new_warehouse from "@/assets/new-warehouse.jpg";
 import carwheel from "@/assets/carwheel.jpg";
 import magusauzun from "@/assets/magusauzun.jpg";
-import { SalesChart } from "@/components/SalesChart";
+
 const investments = [
 	{
 		id: 1,
@@ -29,7 +29,7 @@ const investments = [
 		id: 3,
 		title: "Adding New Sector to Our Business",
 		description:
-			"We are getting ready to import and wholesale car tires. Diversifying our product	range to meet evolving market demands.",
+			"We are getting ready to import and wholesale car tires. Diversifying our product range to meet evolving market demands.",
 		image: carwheel,
 		icon: TrendingUp,
 		hasImage: true,
@@ -66,11 +66,10 @@ export const InvestmentsSection = () => {
 					</p>
 				</div>
 
-				{/* Two Column Layout */}
-				<div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-					{/* Left Column - Investment Cards */}
-					<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-						{investments.map((investment, index) => {
+				{/* Investment Cards Grid */}
+				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+					{investments.map((investment, index) => {
+
 						const Icon = investment.icon;
 						return (
 							<Card
@@ -165,9 +164,7 @@ export const InvestmentsSection = () => {
 					</div>
 
 					{/* Right Column - Sales Chart */}
-					<div className="lg:col-span-1">
-						<SalesChart />
-					</div>
+					
 				</div>
 
 			{/*	Bottom CTA
@@ -183,7 +180,7 @@ export const InvestmentsSection = () => {
 					</p>
 				</div>
 				*/}	
-			</div>
+			
 			
 		</section>
 	);

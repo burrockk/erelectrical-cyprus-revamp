@@ -1,4 +1,4 @@
-import { Zap, Sun, Lightbulb } from "lucide-react";
+import { Zap, Sun, Lightbulb, LoaderPinwheel } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 const sectors = [
@@ -37,6 +37,18 @@ const sectors = [
       "Solar lighting",
     ],
     gradient: "from-primary to-primary-light"
+  },
+  {
+    icon: LoaderPinwheel,
+    title: "Vehicle Tyres",
+    description: "High-quality tyres for all types of vehicles",
+    features: [
+      "From sport tyres to commercial vehicle tyres",
+      "Reasonable prices for all vehicle types",
+      "Durable and reliable brands",
+      "High performance and safety features",
+    ],
+    gradient: "from-solar to-accent"
   }
 ];
 
@@ -54,7 +66,7 @@ export const SectorsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-8">
           {sectors.map((sector, index) => (
             <Card 
               key={index}

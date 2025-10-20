@@ -56,7 +56,7 @@ const Header = () => {
             <img src={logo} alt="Erel Electrical Logo" className="h-14 w-auto" />
             <div>
               <h1 className="text-xl font-bold text-foreground">Erel Electrical</h1>
-              <p className="text-sm text-muted-foreground">Electrical • Lighting • Solar</p>
+              <p className="text-sm text-muted-foreground">Electrical • Lighting • Solar • Tyres</p>
             </div>
           </div>
 

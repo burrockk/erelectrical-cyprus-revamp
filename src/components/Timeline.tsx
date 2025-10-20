@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Building, Factory, Zap, MapPin, Expand, Milestone, ArrowBigUpDash } from "lucide-react";
+import { Building, Factory, Zap, MapPin, Expand, Milestone, ArrowBigUpDash, LoaderPinwheel } from "lucide-react";
 
 const timelineEvents = [
   {
@@ -52,11 +52,18 @@ const timelineEvents = [
     color: "from-primary to-primary-light"
   },
   {
+    year: "2025",
+    title: "Vehicle Tyres",
+    description: "We started importing and distributing all kinds of vehicle tyres, partnering with leading tyre manufacturers to offer a wide range of high-quality products to our customers.",
+    icon: LoaderPinwheel,
+    color: "from-solar to-accent-light"
+  },
+  {
     year: "2026",
     title: "The Biggest",
-    description: "We proudly opened our Mağusa branch — the largest store of its kind in North Cyprus, offering the widest selection of products in the industry and redefining the shopping experience.",
+    description: "We will proudly open our Mağusa branch — the largest store of its kind in North Cyprus, offering the widest selection of products in the industry and redefining the shopping experience.",
     icon: ArrowBigUpDash,
-    color: "from-solar to-accent-light"
+    color: "from-primary to-primary-light"
   }
 ];
 
