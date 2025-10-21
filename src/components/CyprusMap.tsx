@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, X, Building } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import cyprusMapSvg from "@/assets/cyprus-map.svg";
@@ -14,9 +14,9 @@ const branches = [
 		email: "info@erelelectrical.com",
 		hours: "Pazartesi - Cumartesi: 08:00 - 17:00",
 		description: "Main store and warehouse",
-		position: { x: 570, y: 330 },
+		position: { x: 50, y: 44.5 }, // Changed to percentages
 		mapEmbedUrl:
-			"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.963161324797!2d33.33764647644948!3d35.20738655585704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de10d7cb64729f%3A0xd5459079374a2e8b!2sErel%20Elektrik%20Malzemeleri!5e0!3m2!1sen!2s!4v1759931249483!5m2!1sen!2s%22%20width=%22600%22%20height=%22450%22%20style=%22border:0;%22%20allowfullscreen=%22%22%20loading=%22lazy%22%20referrerpolicy=%22no-referrer-when-downgrade", // Google Maps embed linki buraya
+			"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.963161324797!2d33.33764647644948!3d35.20738655585704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de10d7cb64729f%3A0xd5459079374a2e8b!2sErel%20Elektrik%20Malzemeleri!5e0!3m2!1sen!2s!4v1759931249483!5m2!1sen!2s%22%20width=%22600%22%20height=%22450%22%20style=%22border:0;%22%20allowfullscreen=%22%22%20loading=%22lazy%22%20referrerpolicy=%22no-referrer-when-downgrade",
 	},
 	{
 		id: "girne",
@@ -27,9 +27,9 @@ const branches = [
 		email: "info@erelelectrical.com",
 		hours: "Pazartesi - Cuma: 08:00 - 17:00, Cumartesi: 8:00 - 13:00",
 		description: "Kyrenia sales office and warehouse",
-		position: { x: 490, y: 220 },
+		position: { x: 43, y: 29.7 }, // Changed to percentages
 		mapEmbedUrl:
-			"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.844830082775!2d33.31539487645329!3d35.33467454893244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de6cccfc2c0b59%3A0xe56af310f6490dee!2sErel%20%C4%B0n%C5%9Faat%20Malzemeleri!5e0!3m2!1sen!2sus!4v1759931395123!5m2!1sen!2sus", // Google Maps embed linki buraya
+			"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.844830082775!2d33.31539487645329!3d35.33467454893244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de6cccfc2c0b59%3A0xe56af310f6490dee!2sErel%20%C4%B0n%C5%9Faat%20Malzemeleri!5e0!3m2!1sen!2sus!4v1759931395123!5m2!1sen!2sus",
 	},
 	{
 		id: "magusa",
@@ -40,9 +40,22 @@ const branches = [
 		email: "info@erelelectrical.com",
 		hours: "Very Soon",
 		description: "The largest store of its kind",
-		position: { x: 850, y: 380 },
+		position: { x: 70.2, y: 51.4 }, // Changed to percentages
 		mapEmbedUrl:
-			"https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d376.42211611770955!2d33.90504641605066!3d35.155122534494154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgaleri!5e0!3m2!1sen!2s!4v1759934689836!5m2!1sen!2s", // Google Maps embed linki buraya
+			"https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d376.42211611770955!2d33.90504641605066!3d35.155122534494154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgaleri!5e0!3m2!1sen!2s!4v1759934689836!5m2!1sen!2s",
+	},
+	{
+		id: "yerolakkos",
+		name: "Yerolakkos Warehouses & Cable Factory",
+		city: "Yerolakkos",
+		address: "Yerolakkos Industrial Zone, Nicosia",
+		phone: "+90 392 223 87 21 / 22",
+		email: "info@erelelectrical.com",
+		hours: "Pazartesi - Cuma: 08:00 - 17:00, Cumartesi: 8:00 - 13:00",
+		description: "Our main warehouses and cable manufacturing facility",
+		position: { x: 37.7, y: 48.6 }, // Changed to percentages
+		mapEmbedUrl:
+			"https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1535.3089497301805!2d33.27781757420264!3d35.209727332173784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2s!4v1760982817764!5m2!1sen!2s%22%20width=%22600%22%20height=%22450%22%20style=%22border:0;%22%20allowfullscreen=%22%22%20loading=%22lazy%22%20referrerpolicy=%22no-referrer-when-downgrade",
 	},
 ];
 
@@ -71,32 +84,37 @@ export const CyprusMap = () => {
 						</h3>
 
 						{/* Real Cyprus SVG Map */}
-						<div
-							className="relative mx-auto"
-							style={{ maxWidth: "600px", height: "400px" }}
-						>
-							<div className="relative w-full h-full">
+						<div className="relative mx-auto w-full max-w-[600px]">
+							<div className="relative w-full" style={{ paddingBottom: '65.79%' }}>
 								<img
 									src={cyprusMapSvg}
-									alt="Kıbrıs Haritası"
-									className="w-full h-full object-contain"
+									alt="Cyprus Map"
+									className="absolute inset-0 w-full h-full object-contain"
 								/>
 
 								{/* Branch markers positioned over the SVG */}
 								{branches.map((branch) => (
 									<div
 										key={branch.id}
-										className="absolute cursor-pointer transform -translate-x-1/2 -translate-y-1/2"
+										className="absolute cursor-pointer transform -translate-x-1/2 -translate-y-1/2 group"
 										style={{
-											left: `${(branch.position.x / 1140) * 100}%`,
-											top: `${(branch.position.y / 740) * 100}%`,
+											left: `${branch.position.x}%`,
+											top: `${branch.position.y}%`,
 										}}
 										onClick={() => setSelectedBranch(branch.id)}
 									>
 										<div className="relative">
-											<div className="w-6 h-6 bg-accent rounded-full border-2 border-white shadow-lg hover:scale-110 transition-transform cursor-pointer"></div>
-											<div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-												<span className="text-xs font-semibold text-primary bg-white px-2 py-1 rounded shadow">
+											<div className={`w-6 h-6 rounded-full border-2 border-white shadow-lg hover:scale-125 transition-all cursor-pointer ${
+												selectedBranch === branch.id 
+													? 'bg-primary scale-125 ring-2 ring-primary ring-offset-2' 
+													: 'bg-accent'
+											}`}></div>
+											<div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap opacity-0 group-hover:opacity-100 md:opacity-100 transition-opacity pointer-events-none z-10">
+												<span className={`text-xs font-semibold px-2 py-1 rounded shadow-md ${
+													selectedBranch === branch.id
+														? 'bg-primary text-white'
+														: 'bg-white text-primary'
+												}`}>
 													{branch.city}
 												</span>
 											</div>
@@ -107,8 +125,11 @@ export const CyprusMap = () => {
 						</div>
 
 						<div className="mt-6 text-center">
-							<p className="text-sm text-muted-foreground">
-								Select a point on the map to view branch information
+							<p className="text-sm text-muted-foreground md:hidden">
+								Tap a marker to view branch information
+							</p>
+							<p className="text-sm text-muted-foreground hidden md:block">
+								Click or hover over a marker to view branch information
 							</p>
 						</div>
 					</div>
@@ -138,7 +159,7 @@ export const CyprusMap = () => {
 												className="w-full h-64 rounded-lg border-2 border-muted"
 												loading="lazy"
 												referrerPolicy="no-referrer-when-downgrade"
-												title={`${selectedBranchData.name} Konumu`}
+												title={`${selectedBranchData.name} Location`}
 											/>
 										</div>
 									)}
@@ -150,7 +171,7 @@ export const CyprusMap = () => {
 									<div className="flex items-start gap-3">
 										<MapPin className="h-5 w-5 text-accent mt-0.5" />
 										<div>
-											<p className="font-semibold">Adres</p>
+											<p className="font-semibold">Address</p>
 											<p className="text-muted-foreground">
 												{selectedBranchData.address}
 											</p>
@@ -160,7 +181,7 @@ export const CyprusMap = () => {
 									<div className="flex items-start gap-3">
 										<Phone className="h-5 w-5 text-accent mt-0.5" />
 										<div>
-											<p className="font-semibold">Telefon</p>
+											<p className="font-semibold">Phone</p>
 											<p className="text-muted-foreground">
 												{selectedBranchData.phone}
 											</p>
@@ -170,7 +191,7 @@ export const CyprusMap = () => {
 									<div className="flex items-start gap-3">
 										<Mail className="h-5 w-5 text-accent mt-0.5" />
 										<div>
-											<p className="font-semibold">E-posta</p>
+											<p className="font-semibold">Email</p>
 											<p className="text-muted-foreground">
 												{selectedBranchData.email}
 											</p>
@@ -180,7 +201,7 @@ export const CyprusMap = () => {
 									<div className="flex items-start gap-3">
 										<Clock className="h-5 w-5 text-accent mt-0.5" />
 										<div>
-											<p className="font-semibold">Çalışma Saatleri</p>
+											<p className="font-semibold">Working Hours</p>
 											<p className="text-muted-foreground">
 												{selectedBranchData.hours}
 											</p>

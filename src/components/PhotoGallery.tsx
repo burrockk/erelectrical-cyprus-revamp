@@ -13,13 +13,15 @@ import galleryStorage from "@/assets/gallery-storage.jpg";
 import mediumClose from "@/assets/medium-close.jpg";
 import cableGeneral from "@/assets/cable-general.jpg";
 import galleryUnloading from "@/assets/gallery-unloading.jpg";
+import copperStock from "@/assets/copperStock.jpg";
+import solarStock from "@/assets/solarStock.jpg";
 
 const galleryImages = [
   {
     id: 1,
     image: gallerySolar,
     title: "Solar Panel Farm",
-    description: "We use solar energy to power our facilities"
+    description: ""
   },
   {
     id: 2,
@@ -36,38 +38,38 @@ const galleryImages = [
   {
     id: 4,
     image: galleryLightingDisplay,
-    title: "Nicosia Showroom 3",
-    description: "Extensive Lighting Options"
+    title: "Nicosia Showroom",
+    description: ""
   },
   {
     id: 5,
     image: galleryCables,
     title: "NYA Cables",
-    description: "Variety of Sizes and Types"
+    description: ""
   },
   {
     id: 6,
     image: galleryWarehouse,
     title: "Nicosia Warehouse",
-    description: "Extensive Inventory"
+    description: ""
   },
   {
     id: 7,
     image: galleryFacility,
     title: "Yerolakko Warehouse",
-    description: "Spacious Storage"
+    description: ""
   },
   {
     id: 8,
     image: galleryCableReels,
     title: "Nicosia Warehouse Armored Cables",
-    description: "High Quality Cables"
+    description: ""
   },
   {
     id: 9,
     image: galleryStorage,
     title: "Nicosia Warehouse Wholesale",
-    description: "Wholesale Products"
+    description: ""
   },
   {
     id: 10,
@@ -86,7 +88,19 @@ const galleryImages = [
     image: galleryUnloading,
     title: "Always in Stock",
     description: ""
-  }
+  },
+  {
+    id: 13,
+    image: copperStock,
+    title: "Copper Stocks",
+    description: ""
+  },
+  {
+    id: 14,
+    image: solarStock,
+    title: "Solar Panel Stocks",
+    description: ""
+  },
   
 ];
 
