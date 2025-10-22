@@ -1,4 +1,4 @@
-import { Award, Clock, Users, Truck } from "lucide-react";
+import { Award, ShieldCheck, BadgePercent, BadgeCheck } from "lucide-react";
 
 const advantages = [
   {
@@ -7,17 +7,17 @@ const advantages = [
     description: "Family business that has not compromised on ethical values and principles since 1942"
   },
   {
-    icon: Users,
+    icon: BadgeCheck,
     title: "Quality",
     description: "No lower or middle class - only top quality products"
   },
   {
-    icon: Truck,
+    icon: BadgePercent,
     title: "Reasonable Prices",
     description: "1st class products are offered for the most affordable prices"
   },
   {
-    icon: Clock,
+    icon: ShieldCheck,
     title: "The Most Relaible Brands",
     description: "The most trusted brands on a global level with proven track records"
   }

@@ -61,8 +61,8 @@ export const SectorsSection = () => {
             Our Business Areas
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            As the leading company in three key sectors, we provide comprehensive
-            solutions for all your electrical needs.
+            As the leading company in four key sectors, we provide comprehensive
+            solutions for all your electrical and tyre needs.
           </p>
         </div>
 

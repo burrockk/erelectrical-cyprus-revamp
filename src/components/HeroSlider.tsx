@@ -44,7 +44,7 @@ export const HeroSlider = () => {
   };
 
   return (
-    <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen overflow-hidden bg-background">
+    <div className="relative w-full aspect-[1920/650] overflow-hidden bg-background">
       {slides.map((slide, index) => {
         let position = "translate-x-full opacity-0";
         
@@ -62,7 +62,7 @@ export const HeroSlider = () => {
             <img 
               src={slide.image}
               alt={`Slide ${slide.id}`}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover"
             />
           </div>
         );

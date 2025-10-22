@@ -23,9 +23,11 @@ export const ContactSection = () => {
               <h3 className="text-xl font-bold mb-2">Phone</h3>
               <p className="text-white/80 mb-2">Main Office</p>
               <p className="text-lg">+90 392 223 87 21 / 22</p>
-              <p className="text-white/80 text-sm mt-2">
+              <p className="text-white/80 mb-2 mt-4">Whatsapp</p>
+              <p className="text-lg">+90 548 848 37 35</p>
+              {/* <p className="text-white/80 text-sm mt-2">
                 Monday - Saturday: 08:00 - 17:00
-              </p>
+              </p> */}
             </CardContent>
           </Card>
 
