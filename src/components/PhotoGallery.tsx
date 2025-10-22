@@ -13,8 +13,8 @@ import galleryStorage from "@/assets/gallery-storage.jpg";
 import mediumClose from "@/assets/medium-close.jpg";
 import cableGeneral from "@/assets/cable-general.jpg";
 import galleryUnloading from "@/assets/gallery-unloading.jpg";
-import copperStock from "@/assets/copperStock.jpg";
-import solarStock from "@/assets/solarStock.jpg";
+import copperStock from "@/assets/copperstock.jpg";
+import solarStock from "@/assets/solarstock.jpg";
 
 const galleryImages = [
   {
