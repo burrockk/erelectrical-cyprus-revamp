@@ -56,7 +56,7 @@ const galleryImages = [
   {
     id: 7,
     image: galleryFacility,
-    title: "Yerolakko Warehouse",
+    title: "Alayköy Warehouse",
     description: ""
   },
   {

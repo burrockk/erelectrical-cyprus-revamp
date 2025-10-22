@@ -27,7 +27,7 @@ interface Brand {
 const brands: Brand[] = [
   { name: "Schneider Electric", logo: schneiderLogo },
   { name: "Fumagalli", logo: fumagalliLogo },
-  { name: "OSDA", logo: osdaLogo },
+  { name: "OSDA Solar", logo: osdaLogo },
   { name: "Pamukkale Kablo", logo: pamukLogo },
   { name: "ReneSola", logo: renesolaLogo },
   { name: "Ritar", logo: ritarLogo },

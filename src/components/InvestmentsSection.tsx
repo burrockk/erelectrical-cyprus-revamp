@@ -20,7 +20,7 @@ const investments = [
 		id: 2,
 		title: "New Warehouse is Under Construction",
 		description:
-			"We are building a new warehouse in Yerolakkos. Expanding our storage capacity to better serve our growing customer base",
+			"We are building a new warehouse in Alayköy. Expanding our storage capacity to better serve our growing customer base",
 		image: new_warehouse,
 		icon: Warehouse,
 		hasImage: true,

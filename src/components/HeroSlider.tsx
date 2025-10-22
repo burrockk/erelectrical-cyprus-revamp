@@ -10,31 +10,18 @@ const slides = [
   {
     id: 1,
     image: heroWarehouse,
-    /* title: "4 Different Unique Models",
-    subtitle: "Available in 3 Elegant Colors",
-    description: "70 yıllık deneyimimizle profesyonel çözümler sunuyoruz"
-    */
   },
   {
     id: 2,
     image: heroSolar,
-   /* title: "Solar Enerji Çözümleri",
-    subtitle: "Gelecek nesillere temiz enerji bırakın",
-    description: "Premium solar panel ve sistem bileşenleri" */
   },
   {
     id: 3,
     image: heroLighting,
-   /*  title: "Full Range of Low Voltage Solutions",
-    subtitle: "Full range of low voltage solutions",
-    description: "LED teknolojisi ile tasarruf edin" */
   },
   {
     id: 4,
     image: heroIndustrial,
-  /*  title: "Endüstriyel Çözümler",
-    subtitle: "Orta gerilim ve endüstriyel elektrik malzemeleri",
-    description: "Büyük projelerde güvenilir partneriniz" */
   }
 ];
 
@@ -57,7 +44,7 @@ export const HeroSlider = () => {
   };
 
   return (
-    <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen overflow-hidden bg-background">
+    <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen overflow-hidden bg-background">
       {slides.map((slide, index) => {
         let position = "translate-x-full opacity-0";
         
@@ -70,44 +57,13 @@ export const HeroSlider = () => {
         return (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-all duration-700 ease-in-out ${position} bg-center bg-no-repeat bg-contain lg:bg-cover`}
-            style={{
-              backgroundImage: `url(${slide.image})`,
-            }}
+            className={`absolute inset-0 w-full h-full transition-all duration-700 ease-in-out ${position}`}
           >
-            <div className="container mx-auto px-6 h-full flex items-center">
-              <div className={`max-w-3xl text-white transition-opacity duration-500 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}>
-                <h1 className="text-6xl font-bold mb-6 leading-tight">
-                  {/*slide.title*/}
-                </h1>
-                <h2 className="text-2xl mb-4 text-accent">
-                  {/*slide.subtitle*/}
-                </h2>
-                <p className="text-xl mb-8 text-gray-200">
-                  {/*slide.description*/}
-                </p>
-                <div className="flex gap-4">
-               {/*<Button 
-                    size="lg" 
-                    className="bg-gradient-primary hover:bg-primary-dark transition-smooth shadow-glow"
-                  >
-                    Ürünlerimizi Keşfedin
-                  </Button>
-                */}
-               
-              {/*    <Button 
-                    variant="outline" 
-                    size="lg"
-                    className="border-white text-white hover:bg-white hover:text-primary transition-smooth"
-                  >
-                    İletişime Geçin
-                  </Button>
-
-                */}
-
-                </div>
-              </div>
-            </div>
+            <img 
+              src={slide.image}
+              alt={`Slide ${slide.id}`}
+              className="w-full h-full object-contain"
+            />
           </div>
         );
       })}
@@ -116,26 +72,26 @@ export const HeroSlider = () => {
       <Button
         variant="ghost"
         size="icon"
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 text-white hover:bg-white/20 transition-smooth"
+        className="absolute left-2 sm:left-6 top-1/2 transform -translate-y-1/2 text-white hover:bg-white/20 transition-smooth z-10"
         onClick={prevSlide}
       >
-        <ChevronLeft className="h-8 w-8" />
+        <ChevronLeft className="h-6 w-6 sm:h-8 sm:w-8" />
       </Button>
       <Button
         variant="ghost"
         size="icon"
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 text-white hover:bg-white/20 transition-smooth"
+        className="absolute right-2 sm:right-6 top-1/2 transform -translate-y-1/2 text-white hover:bg-white/20 transition-smooth z-10"
         onClick={nextSlide}
       >
-        <ChevronRight className="h-8 w-8" />
+        <ChevronRight className="h-6 w-6 sm:h-8 sm:w-8" />
       </Button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`w-4 h-4 rounded-full transition-smooth ${
+            className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-smooth ${
               index === currentSlide 
                 ? "bg-accent shadow-glow" 
                 : "bg-white/50 hover:bg-white/70"

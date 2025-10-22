@@ -35,7 +35,7 @@ const Header = () => {
       sectionId: "about",
       subItems: [
         { name: "Our History", sectionId: "timeline" },
-        { name: "Investments", sectionId: "investments" } // Yeni subcategory eklendi
+        { name: "Investments", sectionId: "investments" }
       ]
     },
     { name: "Gallery", sectionId: "gallery" },
@@ -47,21 +47,21 @@ const Header = () => {
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-auto md:h-16 py-2 md:py-0 gap-4">
           {/* Logo */}
           <div 
             onClick={() => scrollToSection("top")} 
-            className="flex items-center space-x-3 cursor-pointer"
+            className="flex items-center gap-2 md:gap-3 cursor-pointer flex-shrink-0 min-w-0"
           >
-            <img src={logo} alt="Erel Electrical Logo" className="h-14 w-auto" />
-            <div>
-              <h1 className="text-xl font-bold text-foreground">Erel Electrical</h1>
-              <p className="text-sm text-muted-foreground">Electrical • Lighting • Solar • Tyres</p>
+            <img src={logo} alt="Erel Electrical Logo" className="h-12 md:h-14 w-auto flex-shrink-0" />
+            <div className="min-w-0">
+              <h1 className="text-lg md:text-xl font-bold text-foreground leading-tight">Erel Electrical</h1>
+              <p className="text-xs md:text-sm text-muted-foreground whitespace-nowrap overflow-hidden text-ellipsis">Electrical • Lighting • Solar • Tyres</p>
             </div>
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-8">
             {navigationItems.map((item) =>
               item.subItems ? (
                 <div
@@ -71,8 +71,8 @@ const Header = () => {
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   <button
-                    onClick={() => scrollToSection(item.sectionId)} // Bu satırı ekledik
-                    className="flex items-center gap-1 text-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer relative"
+                    onClick={() => scrollToSection(item.sectionId)}
+                    className="flex items-center gap-1 text-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer relative text-sm xl:text-base"
                   >
                     {item.name}
                     <svg
@@ -110,7 +110,7 @@ const Header = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.sectionId)}
-                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer"
+                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer text-sm xl:text-base"
                 >
                   {item.name}
                 </button>
@@ -119,7 +119,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile menu */}
-          <div className="md:hidden">
+          <div className="lg:hidden ml-auto">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <button className="text-foreground p-2">

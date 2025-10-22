@@ -17,7 +17,7 @@ const sectors = [
   {
     icon: Sun,
     title: "Solar Energy Products",
-    description: "Only high quality and TIER 1 brands for all kind of solar energy components",
+    description: "Only high quality and TIER 1 brands of all kinds of solar energy components",
     features: [
       "Solar panels",
       "Gel and lithium energy storage",
@@ -29,7 +29,7 @@ const sectors = [
   {
     icon: Lightbulb,
     title: "Lighting",
-    description: "Modern and Industrial lighting solutions",
+    description: "Modern and industrial lighting solutions",
     features: [
       "Decorative lighting",
       "Industrial lighting",
@@ -55,39 +55,39 @@ const sectors = [
 export const SectorsSection = () => {
   return (
     <section id="sectors" className="py-20 bg-muted">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Our Business Areas
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            As a leading company in three key sectors, we provide comprehensive
-                        solutions for all your electrical needs.
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+            As the leading company in three key sectors, we provide comprehensive
+            solutions for all your electrical needs.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {sectors.map((sector, index) => (
             <Card 
               key={index}
               className="group hover:shadow-card transition-all duration-500 hover:-translate-y-2 border-none bg-white"
             >
               <CardHeader className="text-center pb-4">
-                <div className={`w-20 h-20 mx-auto rounded-full bg-gradient-to-br ${sector.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <sector.icon className="h-10 w-10 text-white" />
+                <div className={`w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-full bg-gradient-to-br ${sector.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <sector.icon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
                   {sector.title}
                 </h3>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm sm:text-base text-muted-foreground mb-6">
                   {sector.description}
                 </p>
                 <ul className="space-y-2 text-left">
                   {sector.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3">
-                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${sector.gradient}`}></div>
+                    <li key={featureIndex} className="flex items-start gap-3">
+                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${sector.gradient} flex-shrink-0 mt-1.5`}></div>
                       <span className="text-sm text-muted-foreground">
                         {feature}
                       </span>
