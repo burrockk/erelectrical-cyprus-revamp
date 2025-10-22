@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import heroWarehouse from "@/assets/hero-electrical-warehouse.jpg";
 import heroSolar from "@/assets/hero-solar-installation.jpg";
 import heroLighting from "@/assets/hero-lighting-showroom.jpg";
-
+import heroIndustrial from "@/assets/solarbanner.jpg";
 
 const slides = [
   {
@@ -31,7 +31,7 @@ const slides = [
   },
   {
     id: 4,
-    image: heroWarehouse,
+    image: heroIndustrial,
   /*  title: "Endüstriyel Çözümler",
     subtitle: "Orta gerilim ve endüstriyel elektrik malzemeleri",
     description: "Büyük projelerde güvenilir partneriniz" */
@@ -44,7 +44,7 @@ export const HeroSlider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 8000);
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 
