@@ -29,7 +29,7 @@ const investments = [
 		id: 3,
 		title: "Adding New Sector to Our Business",
 		description:
-			"We are getting ready to import and wholesale car tires. Diversifying our product range to meet evolving market demands.",
+			"We are getting ready to import and wholesale car tyres. Diversifying our product range to meet evolving market demands.",
 		image: carwheel,
 		icon: TrendingUp,
 		hasImage: true,

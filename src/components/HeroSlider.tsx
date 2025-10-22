@@ -6,6 +6,7 @@ import heroSolar from "@/assets/hero-solar-installation.jpg";
 import heroLighting from "@/assets/hero-lighting-showroom.jpg";
 import heroIndustrial from "@/assets/solarbanner.jpg";
 
+
 const slides = [
   {
     id: 1,
@@ -31,7 +32,7 @@ export const HeroSlider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 3000);
+    }, 3500);
     return () => clearInterval(timer);
   }, []);
 
