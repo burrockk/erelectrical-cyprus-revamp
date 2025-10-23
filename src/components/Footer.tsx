@@ -39,7 +39,7 @@ export const Footer = () => {
 
           {/* Copyright */}
           <div className="text-center text-white/80 text-sm">
-            <p>&copy; {new Date().getFullYear()} Erel Electric. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Erel Production Ltd. All rights reserved.</p>
           </div>
         </div>
       </div>
